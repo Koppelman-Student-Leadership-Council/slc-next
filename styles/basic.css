@@ -19,6 +19,10 @@
     color: black !important;
 }
 
+.height-250{
+    height: 200;
+    max-height: 200px;
+}
 
 
 .link {
