@@ -32,13 +32,13 @@ export default function Header({ container }) {
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <NavLink href="/community" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Our Community
-                            </a>
+                            </NavLink>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link href="/community/team" ><li><a class="dropdown-item" href="#">Our Team</a></li></Link>
-                                <Link href="/community/clubs"><li><a class="dropdown-item" href="#">KSB Clubs</a></li></Link>
-                                <Link href="/community/contact"><li><a class="dropdown-item" href="#">Contact Us</a></li></Link>
+                                <NavLink href="/community/team" className="dropdown-item" >Our Team</NavLink>
+                                <NavLink href="/community/clubs" className="dropdown-item" >KSB Clubs</NavLink>
+                                <NavLink href="/community/contact" className="dropdown-item" >Contact Us</NavLink>
 
                             </ul>
                         </li>
