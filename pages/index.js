@@ -3,9 +3,7 @@ import Layout from "../components/Layout";
 function HomePage() {
   return <>
     <Layout>
-      <h1>Welcome
-        To The
-        Koppelman Student Leadership Council</h1>
+      
       <h3>"The Leaders of Tomorrow"</h3>
 
       <p>The purpose of the Student Leadership Council is to enrich the campus experience of Koppelman School of Business students, promote student involvement in on-campus activities, and increase the visibility of the Koppelman School of Business. Members of the SLC are ambassadors of the KSB and serve as a liaison between the business students and the KSB Dean.</p>
