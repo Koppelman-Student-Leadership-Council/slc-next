@@ -1,5 +1,6 @@
 import React from "react";
 import Link from 'next/link';
+import NavLink from './NavLink'
 
 export default function Header({ container }) {
     return (
@@ -13,23 +14,21 @@ export default function Header({ container }) {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0  ms-auto">
                         <li class="nav-item">
-                            <Link href="/about">
-                            <a class="nav-link active" aria-current="page" href="header">About</a>
-                            </Link>
+                            <NavLink href="/about" className="nav-link" >About</NavLink>
                         </li>
                         <li class="nav-item">
-                            <Link href="/calendar" ><a class="nav-link" href="#">KSB Calendar</a></Link>
+
+                            <NavLink href="/calendar" className="nav-link" >KSB Calendar</NavLink>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <NavLink href="/events" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Events
-                            </a>
+                            </NavLink>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link href="/events/business-matters" ><li><a class="dropdown-item" href="#">Business Matters</a></li></Link>
-                                <Link href="/events/summit"><li><a class="dropdown-item" href="#">KSB Summit</a></li></Link>
-                                <Link href="/events/learn-more" >
-                                <li><a class="dropdown-item" href="#">Learn More</a></li>
-                                </Link>
+                                <NavLink href="/events/business-matters" className="dropdown-item" >Business Matters</NavLink>
+                                <NavLink href="/events/summit" className="dropdown-item" >KSB Summit</NavLink>
+                                <NavLink href="/events/learn-more" className="dropdown-item" >Learn More</NavLink>
+
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -40,10 +39,12 @@ export default function Header({ container }) {
                                 <Link href="/community/team" ><li><a class="dropdown-item" href="#">Our Team</a></li></Link>
                                 <Link href="/community/clubs"><li><a class="dropdown-item" href="#">KSB Clubs</a></li></Link>
                                 <Link href="/community/contact"><li><a class="dropdown-item" href="#">Contact Us</a></li></Link>
-                                
+
                             </ul>
                         </li>
-                        <li className="btn btn-outline-success mr-5">Subscribe Us</li>
+                        <li >
+                            <a className="btn btn-outline-success mr-5" href="https://form.typeform.com/to/ImW405p0" target="_blank">Subscribe Us</a>
+                        </li>
                     </ul>
                 </div>
             </div>
