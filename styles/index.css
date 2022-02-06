@@ -1,0 +1,429 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write you own custom component styles here */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
+
+
+.events-boxing {
+    padding: 1em;
+    padding-bottom: 2em;
+}
+
+.sidebar-active {
+    background: #6c757d07 !important;
+    margin-right: 1.5em;
+    max-width: 15em;
+    border-left: thick solid #6c757d !important;
+}
+
+.d-none {
+    display: none !important;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.text-black {
+    color: black !important;
+}
+
+html,
+body,
+#wrapper {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapper td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.image-centered {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main {
+    scroll-margin-top: 10em;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.nav-drop-item {
+    font-size: 1.1rem;
+}
+
+.nav-grey-item {
+    color: rgba(255, 255, 255, .7);
+    font-size: 1.1rem;
+}
+
+.nav-grey-item:hover {
+    color: rgba(255, 255, 255, .9);
+}
+
+.nav-grey-item[aria-expanded="true"] {
+    color: rgba(255, 255, 255, 1);
+}
+
+a.active-dark-grey:active {
+    color: rgba(37, 42, 46, 0.8) !important;
+}
+
+a.dropdown-item:active {
+    background-color: rgba(52, 58, 64, .8) !important;
+}
+
+a.dropdown-item.active {
+    background-color: rgba(52, 58, 64, .8) !important;
+}
+
+
+.email-group {
+    margin-bottom: -10px;
+}
+
+.dark-focus:focus {
+    border-color: rgba(52, 58, 64, .8) !important;
+    outline: 0;
+    outline: thin dotted \9;
+    -moz-box-shadow: 0 0 8px rgba(52, 58, 64, .6) !important;
+    box-shadow: 0 0 8px rgba(52, 58, 64, .6) !important;
+
+}
+
+.container-image {
+    position: relative;
+    text-align: center;
+
+}
+
+.contained-image {
+    overflow: hidden;
+}
+
+.centered {
+    position:
+        absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -3.5em);
+
+}
+
+.image-centered {
+
+    color: white;
+    font-size: 4em !important;
+    font-weight: bolder;
+}
+
+
+
+@media screen and (min-width: 950px) {
+    .centered {
+        transform: translate(-50%, -5em);
+    }
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.text-decoration-none:hover {
+    text-decoration: none !important;
+}
+
+.text-white {
+    color: white;
+
+}
+
+.hover-link-footer {
+    padding: 0 10px 0 10px;
+}
+
+.hover-link-footer:hover {
+    cursor: pointer;
+    color: grey !important;
+    background: white !important;
+}
+
+
+
+.closer-top {
+    padding-top: -40px !important;
+    margin-top: -23px !important;
+}
+
+.text-black {
+    color: black;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding: 1rem 3rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ANNOUNCEMENT BAR */
+
+
+.announcement-top-bar {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.announcement-top-bar p {
+    margin: 0;
+}
+
+.announcement-top-bar.alert-dismissible .close {
+    top: 50%;
+    transform: translateY(-55%);
+}
+
+
+/* Image Overlay Hover */
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.main-title {
+    color: #2d2d2d;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0.7em 0;
+
+}
+
+.white-space-preline {
+    white-space: pre-line;
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.content {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.content .content-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+    opacity: 1;
+}
+
+.content-image {
+    width: 100%;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.content-details p {
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.fadeIn-bottom {
+    top: 80%;
+}
+
+.fadeIn-top {
+    top: 20%;
+}
+
+.fadeIn-left {
+    left: 20%;
+}
+
+.fadeIn-right {
+    left: 80%;
+}
+
+/* Image Overlay Hover End */
+
+
+/* Portfolio Posts Start */
+.plyr__video-embed {
+    width: 100%;
+
+
+}
+
+.plyr__video-embed iframe {
+
+    width: 100% !important;
+    height: 27em;
+}
+
+.frame-centered {
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.pointable {
+    cursor: pointer;
+}
+
+
+/* Portfolio Posts End */
+
+
+/* ##Header */
+
+.logo {
+    width: 20%;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.pointable {
+    cursor: pointer;
+}
+
+/* End Header */
+
+
+/* ##Footer */
+.icon-container {
+    padding: 0 10px 0 10px;
+}
+
+.footer-icon {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.footer-icon {
+    color: white;
+}
+
+.footer-icon:hover {
+    color: grey;
+}
+
+
+
+/* Footer End */
+
+
+/* Dancer Componenet */
+
+.dancer-img {
+    width: 100%;
+    height: 7em;
+    overflow: hidden;
+    object-position: top left;
+    object-fit: cover;
+}

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.header {
+    background-color: black
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    color: #edf2f4;
+    position: relative;
+}
+
+.logo {
+    width: 40%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.toggle {
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 50%);
+}
+
+.menu {
+    display: none;
+}
+
+.active {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-top: 0.1rem solid #fdffff;
+}
+
+.active li {
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.donate_btn_mobile,
+.donate_btn {
+    border: none;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    background-color: #c1c82f;
+    color: #edf2f4;
+    outline: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.15rem;
+    margin-bottom: 20px;
+}
+
+.donate_btn {
+    transform: translate(0, 25%);
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 1000px) {
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        height: 80px;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo {
+        width: 13%;
+        margin-right: 30px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu li {
+        padding: 0 15px;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-family: 'Lato', sans-serif;
+        letter-spacing: 0.22rem;
+
+
+    }
+
+    .menu:last-child {
+        padding-right: 30px;
+    }
+
+    .donate_btn_mobile {
+        display: none;
+    }
+
+    .donate_btn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-30%, 30%);
+
+    }
+
+    .donate_btn:hover {
+        background-color: #989e28;
+    }
+}

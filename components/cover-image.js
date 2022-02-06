@@ -1,6 +1,6 @@
 import cn from 'classnames'
 
-export default function CoverImage({ title, src, slug, postUrl }) {
+export default function CoverImage({ title, src, slug }) {
     const image = (
       <img
         src={src}
