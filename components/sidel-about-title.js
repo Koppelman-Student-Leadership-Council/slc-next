@@ -9,7 +9,7 @@ export default function sidedAbout({ content, image, title }) {
                 <p>{content}</p>
             </div>
             <div className="col-md-4 justify-content-center align-self-center ">
-                <img src={image} class="height-250" alt={title} />
+                <img src={image} class="height-250 rounded-10" alt={title} />
             </div>
         </div>
     </>);
