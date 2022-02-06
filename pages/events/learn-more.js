@@ -4,7 +4,7 @@ import PostTitle from  "../../components/post-title";
 function HomePage() {
     return <>
        <Layout>
-           <PostTitle breadcrumb>Business Matters</PostTitle>
+           <PostTitle breadcrumb>Learn More</PostTitle>
         <div className="">
         </div>
        </Layout>

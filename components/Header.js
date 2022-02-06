@@ -26,8 +26,10 @@ export default function Header({ container }) {
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <Link href="/events/business-matters" ><li><a class="dropdown-item" href="#">Business Matters</a></li></Link>
-                                <li><a class="dropdown-item" href="#">KSB Summit</a></li>
+                                <Link href="/events/summit"><li><a class="dropdown-item" href="#">KSB Summit</a></li></Link>
+                                <Link href="/events/learn-more" >
                                 <li><a class="dropdown-item" href="#">Learn More</a></li>
+                                </Link>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
