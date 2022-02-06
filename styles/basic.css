@@ -38,6 +38,10 @@
     pointer-events: none;
 }
 
+.slc-color{
+color: #AD4C66;
+}
+
 .link::before {
     content: '';
     /* show by default */

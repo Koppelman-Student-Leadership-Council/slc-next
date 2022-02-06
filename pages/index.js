@@ -1,10 +1,17 @@
 import Layout from "../components/Layout";
+import PostTitle from "../components/post-long-title";
+import PostSubTitle from "../components/post-sub-title";
+
 
 function HomePage() {
   return <>
     <Layout>
-      
-      <h3>"The Leaders of Tomorrow"</h3>
+      <PostTitle>Welcome <br/>
+        To The <br/>
+        Koppelman Student <span className="slc-color" >Leadership</span> Council</PostTitle>
+        <PostSubTitle>
+        "The Leaders of Tomorrow"
+        </PostSubTitle>
 
       <p>The purpose of the Student Leadership Council is to enrich the campus experience of Koppelman School of Business students, promote student involvement in on-campus activities, and increase the visibility of the Koppelman School of Business. Members of the SLC are ambassadors of the KSB and serve as a liaison between the business students and the KSB Dean.</p>
 

@@ -9,7 +9,7 @@ export default function PostTitle({ children, breadcrumb }) {
         <br />
         {breadcrumb && <Breadcrumbs />}
         <br />
-        <h1 className="link link--metis text-center text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight mb-12 ml-2">
+        <h1 className="closer-top text-center text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight md:leading-none mb-12 ml-2">
           {children}
         </h1>
        
