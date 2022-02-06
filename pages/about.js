@@ -4,7 +4,7 @@ import PostTitle from "../components/post-title";
 function HomePage() {
     return <>
         <Layout>
-            <PostTitle breadcrumb>WHO WE ARE</PostTitle>
+            <PostTitle breadcrumb>Who We Are</PostTitle>
             <div className="">
                 <p>The purpose of the Student Leadership Council (SLC) is two-fold: (1) to enrich the campus experience of Koppelman School of Business students and promote their involvement in activities designed to enhance their professional and personal development and (2) to help raise the visibility of the Koppelman School of Business. Members of the SLC are ambassadors and serve as a liaison between business students and the KSB Dean.
 

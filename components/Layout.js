@@ -19,7 +19,7 @@ export default function LayoutOne(props) {
             <body className="pb-5" >
 
                 <Header />
-                <div className=" container">
+                <div className=" container mx-auto px-5">
                     {props.children}
                 </div>
             </body>
