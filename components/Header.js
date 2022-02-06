@@ -37,7 +37,7 @@ export default function Header({ container }) {
                                 Our Community
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Our Team</a></li>
+                                <Link href="" > <li><a class="dropdown-item" href="#">Our Team</a></li></Link>
                                 <li><a class="dropdown-item" href="#">KSB Clubs</a></li>
                                 <li><a class="dropdown-item" href="#">Contact Us</a></li>
                             </ul>

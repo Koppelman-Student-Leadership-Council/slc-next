@@ -14,7 +14,7 @@ export default function LayoutOne(props) {
                 <meta name="description" content="The SLC aims to inspire and encourage students to take the lead in their personal and professional lives. We aim to ensure students are equipped with the resources and knowledge they need to dive into their professional careers." />
                 <meta name="author" content="Koppelman Student Leadership Council" />
             </head>
-            <body>
+            <body className="pb-5" >
 
                 <Header />
                 <div className=" container">
