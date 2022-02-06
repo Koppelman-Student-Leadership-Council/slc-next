@@ -19,9 +19,9 @@ export default function LayoutOne(props) {
                 <Header />
                 <div className=" container">
                     {props.children}
-                    <Footer />
                 </div>
             </body>
+            <Footer />
 
 
         </>
