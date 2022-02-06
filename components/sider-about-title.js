@@ -8,7 +8,7 @@ export default function sidedAbout({ content, image, title }) {
                 <img src={image} class="height-250" alt={title} />
             </div>
             <div className="col-md-8 justify-content-center align-self-center">
-                <h2 class="text-1xl md:text-2xl lg:text-3xl">{title}</h2>
+                <h2 class="text-2xl lg:text-3xl">{title}</h2>
                 <p>{content}</p>
             </div>
         </div>
