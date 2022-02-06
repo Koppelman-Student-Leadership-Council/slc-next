@@ -16,10 +16,10 @@ export default function LayoutOne(props) {
             </head>
             <body>
 
-                <div className="container-slc container">
-                    <Header/>
+                <Header />
+                <div className=" container">
                     {props.children}
-                    <Footer/>
+                    <Footer />
                 </div>
             </body>
 

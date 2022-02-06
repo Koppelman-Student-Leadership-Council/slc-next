@@ -3,7 +3,7 @@ function HomePage() {
     return <>
        <Layout>
        <h1>Who We Are</h1>
-        <div className="container">
+        <div className="">
             <p>The purpose of the Student Leadership Council (SLC) is two-fold: (1) to enrich the campus experience of Koppelman School of Business students and promote their involvement in activities designed to enhance their professional and personal development and (2) to help raise the visibility of the Koppelman School of Business. Members of the SLC are ambassadors and serve as a liaison between business students and the KSB Dean.
 
                 The Student Leadership Council offers a unique opportunity for Brooklyn College undergraduate and graduate business majors to build tangible leadership skills, connect with the student body, and cultivate long-lasting relationships with professionals.
