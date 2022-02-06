@@ -20,8 +20,9 @@
 }
 
 .height-250{
-    height: 200;
-    max-height: 200px;
+    margin: auto;
+    max-height: 250px;
+    align-self: center;
 }
 
 
