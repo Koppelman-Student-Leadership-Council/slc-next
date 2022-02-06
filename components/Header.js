@@ -37,9 +37,10 @@ export default function Header({ container }) {
                                 Our Community
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link href="" > <li><a class="dropdown-item" href="#">Our Team</a></li></Link>
-                                <li><a class="dropdown-item" href="#">KSB Clubs</a></li>
-                                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                                <Link href="/community/team" ><li><a class="dropdown-item" href="#">Our Team</a></li></Link>
+                                <Link href="/community/clubs"><li><a class="dropdown-item" href="#">KSB Clubs</a></li></Link>
+                                <Link href="/community/contact"><li><a class="dropdown-item" href="#">Contact Us</a></li></Link>
+                                
                             </ul>
                         </li>
                         <li className="btn btn-outline-success mr-5">Subscribe Us</li>
