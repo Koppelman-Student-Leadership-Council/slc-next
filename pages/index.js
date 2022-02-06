@@ -1,8 +1,10 @@
-import Header from "../components/Header";
+import Layout from "../components/Layout";
 
 function HomePage() {
   return <>
-  <Header/>
+  <Layout>
+    
+  </Layout>
   </>
 }
 
