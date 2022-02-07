@@ -5,16 +5,16 @@ import NavLink from './NavLink'
 export default function Header({ container }) {
     return (
 
-        <nav  class="navbar navbar-expand-lg bg-secondary">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark no-flow">
+            <div class="container-fluid ">
                 <Link href="/"><a class="navbar-brand" href="#">
                     <img class="logo" src="/assets/logo.png" alt="Koppelman Student Leadership Council" />
                 </a></Link>
-                <button align="right" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler no-border" align="right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0 nav ms-auto">
+                    <ul class="navbar-nav mb-2 mb-lg-0 nav ms-auto no-flow">
                         <li class="nav-item">
                             <NavLink href="/about" className="link-light nav-link " >About</NavLink>
                         </li>

@@ -9,7 +9,6 @@ export default function LayoutOne(props) {
         <>
             <Head>
                 <link rel="icon" href="slc-icon32x32.ico" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Koppelman Student Leadership Council</title>
                 <meta name="keywords" content="slc, brooklyn, brooklyn college, cuny, Koppelman student leader council, brooklyn student leadership council, brooklyn college business, brooklyn college leadership, koppelman school of business" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
