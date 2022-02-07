@@ -21,11 +21,18 @@
 
 .height-250{
     margin: auto;
-    height: 250px;
     max-height: 250px;
     align-self: center;
 }
 
+.height-is250{
+    min-height: 200px;
+    margin: auto;
+    align-self: center;
+}
+.height-50{
+    height: 500px;
+}
 
 .link {
     position: relative;
@@ -72,3 +79,23 @@ color: #AD4C66;
 .rounded-10{
     border-radius:10px;
 }
+
+.logo{
+    max-height: 150px;
+    margin-left: -5px;
+}
+
+.link-light{
+    color: rgb(207, 207, 207) !important;
+}
+
+.link-light:hover{
+    color: white !important;
+}
+
+
+.link-light.active{
+    color: white !important;
+}
+
+

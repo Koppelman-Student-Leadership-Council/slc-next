@@ -1,6 +1,6 @@
 export default function sidedAbout({ content, isQuote }) {
     return (<>   <div class="container">
-        <div class="row shadow-big hover:shadow-medium transition-shadow duration-200 height-250 ">
+        <div class="row shadow-big hover:shadow-medium transition-shadow duration-200 height-is250 ">
             <div class="justify-content-center align-self-center">
                 {isQuote && <>
                     <div className="content justify-content" align="center"> 
