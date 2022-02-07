@@ -8,12 +8,11 @@ export default function Partnership({
     imageLink
 }) {
     return (
-        <div className=" col-md-4 mb-2" >
-            <div className="" ></div>
+        <div className=" col-md-3 mb-2 rounded-10" >
             <div className=" content  ">
                 <a target="_blank" href={link}>
                     <a>
-                        <div className="content-overlay "></div>
+                        <div className="content-overlay rounded-10"></div>
 
                         <CoverImage slug={title} title={title} src={imageLink} postUrl={"programs"} />
                         <a target="_blank" as={link} href={link} >
