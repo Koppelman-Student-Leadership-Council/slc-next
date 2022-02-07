@@ -11,7 +11,7 @@ function HomePage() {
         <Layout>
             <PostTitle breadcrumb>Contact</PostTitle>
             <p>
-                Complete the form below or email us at <b>info@Heidilatskydance.org</b>
+                Complete the form below or email us at <b>brooklynslcouncil@gmail.com</b>
             </p>
 
             <Form>
@@ -20,28 +20,26 @@ function HomePage() {
                     <Form.Label>Name</Form.Label>
                     <Form.Control required className="dark-focus" type="text" placeholder="John Doe" />
                 </Form.Group>
-
-                <div  >
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control required className="dark-focus" type="email" placeholder="johndoe@gmail.com" />
-
-                    </Form.Group>
-                </div>
-
-                <Form.Group>
-                    <Form.Label>Subject</Form.Label>
-
-                    <Form.Control required className="dark-focus" type="text" placeholder="Interview Request" />
+                <br />
+                <Form.Group controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control required className="dark-focus" type="email" placeholder="johndoe@gmail.com" />
 
                 </Form.Group>
+                <br />
+                <Form.Group>
+                    <Form.Label>Phone Number</Form.Label>
 
+                    <Form.Control required className="dark-focus" type="number" placeholder="Interview Request" />
+
+                </Form.Group>
+                <br />
                 <Form.Group>
                     <Form.Label>Message</Form.Label>
                     <Form.Control className="dark-focus" as="textarea" rows={3} placeholder="Message." />
                 </Form.Group>
-
-                <Button variant="dark" type="submit">
+                <br />
+                <Button type="submit" className="black-text" >
                     SUBMIT
                 </Button>
             </Form>
@@ -50,7 +48,6 @@ function HomePage() {
                 <b> Mailing Address</b> <br />
                 2900 Bedford Ave. <br />
                 Brooklyn, NY 11210 <br />
-                brooklynslcouncil@gmail.com<br />
             </div>
 
             <div className="mb-5 " >

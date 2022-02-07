@@ -11,11 +11,11 @@ import {
 const Map = (props) => {
     return (
         <GoogleMap
-            defaultZoom={13}
-            defaultCenter={{ lat: 40.759, lng: -73.992 }}
+            defaultZoom={15}
+            defaultCenter={{ lat: 40.63123560034159, lng: -73.95241238859913 }}
         >
 
-            {props.isMarkerShown && <Marker position={{ lat: 40.759, lng: -73.992 }} />}
+            {props.isMarkerShown && <Marker position={{ lat: 40.63123560034159, lng: -73.95241238859913 }} />}
         </GoogleMap>
     );
 }

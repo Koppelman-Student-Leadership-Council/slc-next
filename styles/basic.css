@@ -61,6 +61,10 @@
     pointer-events: none;
 }
 
+.black-text{
+    color: black;
+}
+
 .slc-color {
     color: #AD4C66;
 }
