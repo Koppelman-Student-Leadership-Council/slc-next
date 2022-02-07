@@ -62,7 +62,6 @@ function HomePage() {
                 {!documentRendered &&
                     <div className="height-50 content-center center-content" ><div>Retrieving Calendar Events...</div>
                     </div>}
-                <h1>Featured Events</h1>
 
             </div>
         </Layout>
