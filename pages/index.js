@@ -32,12 +32,6 @@ The purpose of the Student Leadership Council is to enrich the campus experience
       <div className="content-center text-center">
         <a className="btn-slc" el="noopener noreferrer"  rel="noopener noreferrer" target="_blank" href='https://docs.google.com/forms/d/e/1FAIpQLScUevWRKsB14P99PNQrV5r6k9jpnTUCs4vI1YJVMGO5YzOg4w/viewform?fbclid=IwAR00LbEcQzNEP34fCCUy11zlH6CkwbZsJPBm8J0XfIHdZJn1ahKHnOnyC7o'><span>Join Us </span></a>
         <div align="center" className="socialbtns">
-          <ul>
-            <li><a href="https://www.facebook.com/koppelmanslc" className="fa fa-lg fa-facebook">  </a></li>
-            <li><a href="https://www.linkedin.com/in/koppelmanslc/" className="fa fa-lg fa-linkedin"></a></li>
-            <li><a href="https://www.instagram.com/koppelmanslc" className="fa fa-lg fa-instagram"></a></li>
-            <li><a href="https://www.youtube.com/channel/UCnmKIfUtDC2mU_yiVPusYSg" className="fa fa-lg fa-youtube"></a></li>
-          </ul>
         </div>
       </div>
 
