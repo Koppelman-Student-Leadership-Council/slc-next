@@ -30,14 +30,14 @@ The purpose of the Student Leadership Council is to enrich the campus experience
       <br /><SideLeftAboutTitle image="assets/promotion/community.jpg" title="Community" content="The SLC aims to increase the visibility of the Koppelman School of Business and facilitate lasting professional (and personal) relationships between all members of the KSB. We accomplish this mission by drawing together Koppelman clubs, encouraging their continuation on campus, and ensuring students are familiar with the resources available to them." />
       <br />
       <div className="content-center text-center">
-        <a class="btn-slc" target="_blank" href='https://docs.google.com/forms/d/e/1FAIpQLScUevWRKsB14P99PNQrV5r6k9jpnTUCs4vI1YJVMGO5YzOg4w/viewform?fbclid=IwAR00LbEcQzNEP34fCCUy11zlH6CkwbZsJPBm8J0XfIHdZJn1ahKHnOnyC7o'><span>Join Us </span></a>
-        <div align="center" class="socialbtns">
+        <a className="btn-slc" target="_blank" href='https://docs.google.com/forms/d/e/1FAIpQLScUevWRKsB14P99PNQrV5r6k9jpnTUCs4vI1YJVMGO5YzOg4w/viewform?fbclid=IwAR00LbEcQzNEP34fCCUy11zlH6CkwbZsJPBm8J0XfIHdZJn1ahKHnOnyC7o'><span>Join Us </span></a>
+        <div align="center" className="socialbtns">
           <ul>
             <li><FontAwesomeIcon icon="facebook" /></li>
-            <li><a href="https://www.facebook.com/koppelmanslc" class="fa fa-lg fa-facebook">  </a></li>
-            <li><a href="https://www.linkedin.com/in/koppelmanslc/" class="fa fa-lg fa-linkedin"></a></li>
-            <li><a href="https://www.instagram.com/koppelmanslc" class="fa fa-lg fa-instagram"></a></li>
-            <li><a href="https://www.youtube.com/channel/UCnmKIfUtDC2mU_yiVPusYSg" class="fa fa-lg fa-youtube"></a></li>
+            <li><a href="https://www.facebook.com/koppelmanslc" className="fa fa-lg fa-facebook">  </a></li>
+            <li><a href="https://www.linkedin.com/in/koppelmanslc/" className="fa fa-lg fa-linkedin"></a></li>
+            <li><a href="https://www.instagram.com/koppelmanslc" className="fa fa-lg fa-instagram"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCnmKIfUtDC2mU_yiVPusYSg" className="fa fa-lg fa-youtube"></a></li>
           </ul>
         </div>
       </div>
