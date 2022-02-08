@@ -6,6 +6,7 @@ import SideLeftAboutTitle from "../components/sidel-about-title"
 import SideRightAboutTitle from "../components/sider-about-title"
 import SideRightAbout from "../components/sider-about"
 import SideCenterAbout from "../components/sidec-about"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 function HomePage() {
@@ -30,7 +31,15 @@ The purpose of the Student Leadership Council is to enrich the campus experience
       <br />
       <div className="content-center text-center">
         <a class="btn-slc" target="_blank" href='https://docs.google.com/forms/d/e/1FAIpQLScUevWRKsB14P99PNQrV5r6k9jpnTUCs4vI1YJVMGO5YzOg4w/viewform?fbclid=IwAR00LbEcQzNEP34fCCUy11zlH6CkwbZsJPBm8J0XfIHdZJn1ahKHnOnyC7o'><span>Join Us </span></a>
-
+        <div align="center" class="socialbtns">
+          <ul>
+            <li><FontAwesomeIcon icon="facebook" /></li>
+            <li><a href="https://www.facebook.com/koppelmanslc" class="fa fa-lg fa-facebook">  </a></li>
+            <li><a href="https://www.linkedin.com/in/koppelmanslc/" class="fa fa-lg fa-linkedin"></a></li>
+            <li><a href="https://www.instagram.com/koppelmanslc" class="fa fa-lg fa-instagram"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCnmKIfUtDC2mU_yiVPusYSg" class="fa fa-lg fa-youtube"></a></li>
+          </ul>
+        </div>
       </div>
 
     </Layout>
