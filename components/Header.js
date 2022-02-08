@@ -45,7 +45,7 @@ export default function Header({ container }) {
                             </ul>
                         </li>
                         <li >
-                            <a className="btn btn-outline-light slc-hover-background ml-2" href="https://form.typeform.com/to/ImW405p0" target="_blank">Subscribe Us</a>
+                            <a className="btn btn-outline-light slc-hover-background ml-2" href="https://form.typeform.com/to/ImW405p0" target="_blank" rel="noopener noreferrer">Subscribe Us</a>
                         </li>
                     </ul>
                 </div>

@@ -12,7 +12,7 @@ function HomePage() {
                 </p>
 
 
-                <p>The growth of the Student Leadership Council is in part facilitated by the diverse blend of ideas and unique talents of all its members. Much of the SLC's success can be attributed to its executive board and members at large who continually strive to increase its visibility and influence.</p>
+                <p>The growth of the Student Leadership Council is in part facilitated by the diverse blend of ideas and unique talents of all its members. Much of the SLC&apos;s success can be attributed to its executive board and members at large who continually strive to increase its visibility and influence.</p>
                 <p> The Student Leadership Council offers a unique opportunity for Brooklyn College undergraduate and graduate business majors to build tangible leadership skills, connect with the student body, and cultivate long-lasting relationships with professionals.</p>
                 <p>Throughout the academic year, we offer support and guidance to fellow business clubs and organizations. Our signature events are the Business Matters! Symposium and the KSB Summit.</p>
 

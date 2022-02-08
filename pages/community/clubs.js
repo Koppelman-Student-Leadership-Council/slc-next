@@ -11,7 +11,7 @@ function HomePage() {
             <PostTitle breadcrumb>Our Clubs</PostTitle>
             <div className="row">
                 {Clubs.map((club)=>{
-                   return  <Partnership title={club["title"]} link={club['link']} imageLink={"/assets/clubs/resized/"+club['imagename']+".png"} />
+                   return  <Partnership key={club["imagename"]} title={club["title"]} link={club['link']} imageLink={"/assets/clubs/resized/"+club['imagename']+".png"} />
                 })}
             </div>
         </Layout>
