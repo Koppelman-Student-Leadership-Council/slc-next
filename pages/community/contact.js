@@ -4,28 +4,29 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Map from '../../components/map'
 import emailjs from 'emailjs-com';
-import axios from "axios";
-// SLADmin448!12334
-// wangnelson2@gmail.com
+
+import JoinButton from '../../components/btn-join-slc'
+
 
 function Contact() {
 
     const handleSubmission = async e => {
         event.preventDefault()
-    
+
         emailjs.sendForm('service_3wgvjnc', 'template_cgpz9g9', e.target, 'user_bUjdCRqLeJSakqKuFlLB7')
-        .then((result) => {
-            window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
-        }, (error) => {
-            console.log(error.text);
-        });
-    
+            .then((result) => {
+                window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+            }, (error) => {
+                console.log(error.text);
+            });
+
     }
 
     const mapUrl = "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAHedcWWJ17w-V1js7ERyz3USvPosmjNKQ";
     return <>
         <Layout>
-            <PostTitle breadcrumb >Contact</PostTitle>
+            <PostTitle breadcrumb >Contact  </PostTitle>
+            <span className="float-right">< JoinButton /> </span><br />
             <p>
                 Complete the form below or email us at <b>brooklynslcouncil@gmail.com</b>
             </p>
@@ -46,7 +47,7 @@ function Contact() {
                 <Form.Group>
                     <Form.Label >Phone Number</Form.Label>
 
-                    <Form.Control id="phone"  required className="dark-focus" type="number" placeholder="Interview Request" />
+                    <Form.Control id="phone" required className="dark-focus" type="number" placeholder="Interview Request" />
 
                 </Form.Group>
                 <br />

@@ -7,6 +7,7 @@ import SideRightAboutTitle from "../components/sider-about-title"
 import SideRightAbout from "../components/sider-about"
 import SideCenterAbout from "../components/sidec-about"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import JoinButton from '../components/btn-join-slc'
 
 
 function HomePage() {
@@ -30,10 +31,8 @@ The purpose of the Student Leadership Council is to enrich the campus experience
       <br /><SideLeftAboutTitle image="/assets/promotion/community.jpg" title="Community" content="The SLC aims to increase the visibility of the Koppelman School of Business and facilitate lasting professional (and personal) relationships between all members of the KSB. We accomplish this mission by drawing together Koppelman clubs, encouraging their continuation on campus, and ensuring students are familiar with the resources available to them." />
       <br />
       <div className="content-center text-center">
-        <a className="btn-slc" el="noopener noreferrer"  rel="noopener noreferrer" target="_blank" href='https://docs.google.com/forms/d/e/1FAIpQLScUevWRKsB14P99PNQrV5r6k9jpnTUCs4vI1YJVMGO5YzOg4w/viewform?fbclid=IwAR00LbEcQzNEP34fCCUy11zlH6CkwbZsJPBm8J0XfIHdZJn1ahKHnOnyC7o'><span>Join Us </span></a>
-      <div align="center" className="socialbtns">
-        </div>
-      </div>
+        < JoinButton />    </div>
+
 
     </Layout>
   </>
