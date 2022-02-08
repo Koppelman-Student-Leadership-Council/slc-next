@@ -27,6 +27,12 @@ The purpose of the Student Leadership Council is to enrich the campus experience
       <br /><SideLeftAboutTitle title="Leadership" content="The Student Leadership Council aims to cultivate the leadership potential of all our members. We offer a unique platform for idea-sharing and development, access to senior administrators in the KSB, and encourage peer-to-peer mentoring.We encourage our members to strive for more in their careers, academics, and in their communities." image="assets/promotion/our-team.png" />
       <br /><SideRightAboutTitle image="assets/promotion/business-matters.jpg" title="Professional Developement" content="The SLC aims to inspire and encourage students to take the lead in their personal and professional lives. We aim to ensure students are equipped with the resources and knowledge they need to dive into their professional careers." />
       <br /><SideLeftAboutTitle image="assets/promotion/community.jpg" title="Community" content="The SLC aims to increase the visibility of the Koppelman School of Business and facilitate lasting professional (and personal) relationships between all members of the KSB. We accomplish this mission by drawing together Koppelman clubs, encouraging their continuation on campus, and ensuring students are familiar with the resources available to them." />
+      <br />
+      <div className="content-center text-center">
+        <a class="btn-slc" target="_blank" href='https://docs.google.com/forms/d/e/1FAIpQLScUevWRKsB14P99PNQrV5r6k9jpnTUCs4vI1YJVMGO5YzOg4w/viewform?fbclid=IwAR00LbEcQzNEP34fCCUy11zlH6CkwbZsJPBm8J0XfIHdZJn1ahKHnOnyC7o'><span>Join Us </span></a>
+
+      </div>
+
     </Layout>
   </>
 }

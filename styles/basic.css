@@ -61,7 +61,52 @@
     pointer-events: none;
 }
 
-.black-text{
+
+.btn-slc {
+    display: inline-block;
+    border-radius: 12px;
+    background-color: #882345;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-family: Merriweather;
+    align-content: center;
+}
+
+.btn-slc span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.8s;
+
+}
+
+.btn-slc span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn-slc:hover span {
+    padding-right: 25px;
+    color: white;
+}
+
+.btn-slc:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.black-text {
     color: black;
 }
 
