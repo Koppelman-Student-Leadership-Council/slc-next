@@ -8,8 +8,6 @@ import SimpleReactLightbox from 'simple-react-lightbox'
 
 
 
-
-
 export default function MyApp({ Component, pageProps }) {
   
   useEffect(() => {

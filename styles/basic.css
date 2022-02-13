@@ -157,9 +157,9 @@
     color: white !important;
 }
 
-.portraits-front{
+.portraits-front {
 
-    
+
     height: 300px !important;
 
     background-color: #87807C;
@@ -167,16 +167,21 @@
 
 }
 
-.center-content{
+.center-content {
     align-content: center;
 }
 
-.center-element{
-    margin:auto;
+.center-element {
+    margin: auto;
     display: block;
 }
 
-.portraits-back{
+.wrap-content {
+    
+    max-width: 250.87px !important;
+}
+
+.portraits-back {
 
     height: 300px !important;
 

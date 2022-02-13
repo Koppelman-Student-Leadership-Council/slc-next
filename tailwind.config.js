@@ -1,4 +1,9 @@
 module.exports = {
+  plugins: [
+    require('flowbite/plugin')
+  ], content: [
+    "./node_modules/flowbite/**/*.js"
+  ],
   purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
     extend: {
