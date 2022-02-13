@@ -23,9 +23,9 @@ export default class extends React.Component {
 
                 <Card className="no-border shadow">
                     <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
-                        <button onClick={this.handleClick} className="portraits ">
+                        <div onClick={this.handleClick} className="portraits ">
                             <img class="rounded portraits-front" src="\assets\team-members\resized-members\elena.png" alt="${member.name}" />
-                        </button>
+                        </div>
 
                         <div onClick={this.handleClick} className='portraits rounded portraits-back'>
                             This is the back of the card.
@@ -33,7 +33,6 @@ export default class extends React.Component {
                     </ReactCardFlip>
                     <Card.Body>
                         <Card.Title>
-
                             Elena Ivanov
                         </Card.Title> <Card.Text>
                             Strategist - Alumni Relations

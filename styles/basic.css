@@ -167,6 +167,15 @@
 
 }
 
+.center-content{
+    align-content: center;
+}
+
+.center-element{
+    margin:auto;
+    display: block;
+}
+
 .portraits-back{
 
     height: 300px !important;
