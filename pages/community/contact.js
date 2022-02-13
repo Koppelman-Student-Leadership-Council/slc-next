@@ -1,11 +1,11 @@
 import Layout from "../../components/Layout";
-import PostTitle from "../../components/post-title";
+import PostTitle from "../../components/PostTitle";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import Map from '../../components/map'
+import Map from '../../components/Map'
 import emailjs from 'emailjs-com';
 
-import JoinButton from '../../components/btn-join-slc'
+import JoinButton from '../../components/BtnJoinSLC'
 
 
 function Contact() {
