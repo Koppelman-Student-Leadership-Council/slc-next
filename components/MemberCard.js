@@ -23,10 +23,10 @@ export default class extends React.Component {
                     <img class="portraits rounded portraits-front" src="\assets\team-members\resized-members\elena.png" alt="${member.name}" />
                 </button>
 
-                <h1>
+                <div onClick={this.handleClick} className='portraits rounded portraits-back'>
                     This is the back of the card.
                     <button onClick={this.handleClick}>Click to flip</button>
-                </h1>
+                </div>
             </ReactCardFlip>
         )
     }

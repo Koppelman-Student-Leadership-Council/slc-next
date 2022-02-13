@@ -163,9 +163,16 @@
 
 }
 
+.portraits-back{
+    background-color: #87807C;
+    transition: all .3s ease-in-out 0s;
+
+    background-color: #AD4C66;
+}
+
 .portraits {
     height: 300px;
-    width: auto;
+    max-width: 236.87px !important;
     box-shadow: 1px 3px 9px 0px rgba(0, 0, 0, 0.4);
 }
 
