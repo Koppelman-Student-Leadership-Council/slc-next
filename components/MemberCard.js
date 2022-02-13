@@ -10,7 +10,12 @@ const positionData = {
 }
 
 const departmentData = {
-    "Alumni Relations": ""
+    "Alumni Relations": "The Alumni Relations Department is responsible for fostering relationships with SLC’s <br />" +
+        "alumni network and creating an engaged and supportive connection between former and current SLC members. <br />" +
+        "SLC’s alumni network consists of diverse members in terms of experience, industries and exposure. The department  <br />" +
+        "is responsible for keeping the alumni aware about the successes and current events hosted by SLC through newsletters.  <br />" +
+        "Buddy System is a mentorship program within SLC that pairs a current member with an alumni for the professional <br />" +
+        " development of the current members and for the alumni to stay better connected and engaged with the progress of SLC"
 }
 
 
@@ -48,16 +53,15 @@ export default class extends React.Component {
                         <Card.Body>
                             <Card.Title>
                                 Elena Ivanov
-                            </Card.Title> <Card.Text><>
+                            </Card.Title> <Card.Text>
 
-                                Strategist -
-                                <span>Link</span></>
-                            </Card.Text><span data-tip data-for="registerTip">
-                                Register
-                            </span>
+                                Strategist -<span data-tip data-for="registerTip">
+                                    Alumni Relations
+                                </span>
+                            </Card.Text>
 
-                            <ReactTooltip id="registerTip" place="bottom" effect="solid">
-                                Tooltip for the register button
+                            <ReactTooltip id="registerTip" place="bottom" effect="solid" multiline="true" >
+                                <p dangerouslySetInnerHTML={{ __html: departmentData["Alumni Relations"] }}></p>
                             </ReactTooltip>
 
                         </Card.Body>
