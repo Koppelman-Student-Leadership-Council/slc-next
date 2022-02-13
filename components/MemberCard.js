@@ -19,7 +19,7 @@ const departmentData = {
 }
 
 
-export default class extends React.Component {
+export default class MemberCard extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -43,7 +43,7 @@ export default class extends React.Component {
                     <Card className="no-border ">
                         <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                             <div onClick={this.handleClick} className="portraits ">
-                                <img class="rounded portraits-front" src="\assets\team-members\resized-members\elena.png" alt="${member.name}" />
+                                <img className="rounded portraits-front" src="\assets\team-members\resized-members\elena.png" alt="${member.name}" />
                             </div>
 
                             <div onClick={this.handleClick} className='portraits rounded portraits-back'>
