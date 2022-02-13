@@ -156,3 +156,20 @@
 .link-light.active {
     color: white !important;
 }
+
+.portraits-front{
+    background-color: #87807C;
+    transition: all .3s ease-in-out 0s;
+
+}
+
+.portraits {
+    height: 300px;
+    width: auto;
+    box-shadow: 1px 3px 9px 0px rgba(0, 0, 0, 0.4);
+}
+
+.portraits-front:hover {
+    background-color: #AD4C66;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

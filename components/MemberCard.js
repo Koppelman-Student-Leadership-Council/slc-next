@@ -6,7 +6,7 @@ export default class extends React.Component {
         super();
         this.state = {
             isFlipped: false
-            
+
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -18,11 +18,10 @@ export default class extends React.Component {
 
     render() {
         return (
-            <ReactCardFlip  isFlipped={this.state.isFlipped} flipDirection="horizontal">
-                <h1>
-                    This is the front of the card.
-                    <button onClick={this.handleClick}>Click to flip</button>
-                </h1>
+            <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
+                <button  onClick={this.handleClick}>
+                    <img class="portraits rounded portraits-front" src="\assets\team-members\resized-members\elena.png" alt="${member.name}" />
+                </button>
 
                 <h1>
                     This is the back of the card.
