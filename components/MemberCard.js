@@ -1,4 +1,5 @@
 import ReactCardFlip from 'react-card-flip';
+import Card from 'react-bootstrap/Card';
 import React from 'react'
 
 export default class extends React.Component {
@@ -18,15 +19,31 @@ export default class extends React.Component {
 
     render() {
         return (
-            <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
-                <button  onClick={this.handleClick}>
-                    <img class="portraits rounded portraits-front" src="\assets\team-members\resized-members\elena.png" alt="${member.name}" />
-                </button>
+            <><div className='portraits'>
 
-                <div onClick={this.handleClick} className='portraits rounded portraits-back'>
-                    This is the back of the card.
-                </div>
-            </ReactCardFlip>
+                <Card className="no-border shadow">
+                    <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
+                        <button onClick={this.handleClick} className="portraits ">
+                            <img class="rounded portraits-front" src="\assets\team-members\resized-members\elena.png" alt="${member.name}" />
+                        </button>
+
+                        <div onClick={this.handleClick} className='portraits rounded portraits-back'>
+                            This is the back of the card.
+                        </div>
+                    </ReactCardFlip>
+                    <Card.Body>
+                        <Card.Title>
+
+                            Elena Ivanov
+                        </Card.Title> <Card.Text>
+                            Strategist - Alumni Relations
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+
+            </div>
+
+            </>
         )
     }
 }
