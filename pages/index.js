@@ -1,13 +1,13 @@
 import Layout from "../components/Layout";
-import PostTitle from "../components/PostLongTitle";
-import PostSubTitle from "../components/PostSubTitle";
+import PostTitle from "../components/post-long-title";
+import PostSubTitle from "../components/post-sub-title";
 
-import SideLeftAboutTitle from "../components/SideLeftAboutTitle"
-import SideRightAboutTitle from "../components/SideRightAboutTitle"
-import SideRightAbout from "../components/SideRightAbout"
-import SideCenterAbout from "../components/SideCenterAbout"
+import SideLeftAboutTitle from "../components/sidel-about-title"
+import SideRightAboutTitle from "../components/sider-about-title"
+import SideRightAbout from "../components/sider-about"
+import SideCenterAbout from "../components/sidec-about"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import JoinButton from '../components/BtnJoinSLC'
+import JoinButton from '../components/btn-join-slc'
 
 
 function HomePage() {

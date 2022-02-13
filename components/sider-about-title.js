@@ -1,5 +1,5 @@
 
-import PostSubTitle from "./PostSubTitle";
+import PostSubTitle from "./post-sub-title";
 
 export default function sidedAbout({ content, image, title }) {
     return (<>
