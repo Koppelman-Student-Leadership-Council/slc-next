@@ -166,7 +166,11 @@
 .portraits-back{
     background-color: #87807C;
     transition: all .3s ease-in-out 0s;
-
+    color: white;
+    justify-content: center;
+    align-content: center;
+    place-content: center;
+    text-align: center;
     background-color: #AD4C66;
 }
 

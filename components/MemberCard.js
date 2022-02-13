@@ -25,7 +25,6 @@ export default class extends React.Component {
 
                 <div onClick={this.handleClick} className='portraits rounded portraits-back'>
                     This is the back of the card.
-                    <button onClick={this.handleClick}>Click to flip</button>
                 </div>
             </ReactCardFlip>
         )
