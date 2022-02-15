@@ -7,28 +7,33 @@ import { useEffect, useState } from "react";
 
 
 
-function HomePage() {
+function HomePage({ calendarPreData }) {
     const [data, setData] = useState(null)
     const [documentRendered, setDocumentRendered] = useState(false);
     const [events, setEvents] = useState([{
-        id: 2,
-        startAt: '2021-11-21T18:00:00.000Z',
-        endAt: '2021-11-21T19:00:00.000Z',
-        summary: 'test',
-        color: 'blue',
+        // id: 2,
+        // startAt: '2021-11-21T18:00:00.000Z',
+        // endAt: '2021-11-21T19:00:00.000Z',
+        // summary: 'test',
+        // color: 'blue',
     }])
+    let eventsMemory = []
+
+    // console.log(calendarPreData)
 
 
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setDocumentRendered(true)
+        }
+        appendEvents(events, calendarPreData)
         fetch('https://admin.brooklynslcouncil.com/public/api/events-calendar').then((res) => res.json()).then((data) => {
             setData(data);
             // console.log(data);
             appendEvents(events, data)
 
-            if (typeof window !== 'undefined') {
-                setDocumentRendered(true)
-            }
+
         })
 
     }, [documentRendered])
@@ -36,12 +41,15 @@ function HomePage() {
     function appendEvents(events, data) {
         data.forEach(
             event => {
-                events.push({
-                    id: event.calendar_id,
-                    startAt: event.event_date_starts,
-                    endAt: event.event_date_ends,
-                    summary: event.title
-                });
+                if (!eventsMemory.includes(data.calendar_id)) {
+                    eventsMemory.push(data.calendar_id)
+                    events.push({
+                        id: event.calendar_id,
+                        startAt: event.event_date_starts,
+                        endAt: event.event_date_ends,
+                        summary: event.title
+                    });
+                }
             }
         )
         setEvents(events)
@@ -66,6 +74,16 @@ function HomePage() {
             </div>
         </Layout>
     </>
+}
+
+export async function getStaticProps() {
+    const res = await fetch('https://admin.brooklynslcouncil.com/public/api/events-calendar')
+    const calendarPreData = await res.json()
+    return {
+        props: {
+            calendarPreData,
+        },
+    }
 }
 
 export default HomePage
