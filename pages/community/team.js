@@ -11,7 +11,7 @@ function HomePage({ membersData }) {
             <div className="row">
 
                 {membersData.map((member) => {
-                    return <div className="col-md-4 col-sm-5">
+                    return <div className="col-md-6 col-lg-3">
 
                         <MemberCard image={member.image_link} name={member.name} description={member.description} title={member.title} department={member.department} /></div>
                 })}
@@ -21,7 +21,7 @@ function HomePage({ membersData }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch('https://admin.brooklynslcouncil.com/public/api/team')
+    const res = await fetch('https://admin.brooklynslcouncil.com/public/api/team/active')
     const membersData = await res.json()
     return {
         props: {
