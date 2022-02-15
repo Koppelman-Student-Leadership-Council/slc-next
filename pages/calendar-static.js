@@ -41,7 +41,7 @@ function HomePage({ calendarPreData }) {
     function appendEvents(events, data) {
         data.forEach(
             event => {
-                if (true) {
+                if (!eventsMemory.includes(data.calendar_id)) {
                     eventsMemory.push(data.calendar_id)
                     events.push({
                         id: event.calendar_id,
