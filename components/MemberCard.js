@@ -43,20 +43,20 @@ export default class MemberCard extends React.Component {
                     <Card className="no-border ">
                         <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                             <div onClick={this.handleClick} className="portraits ">
-                                <img className="rounded portraits-front" src="\assets\team-members\resized-members\elena.png" alt="${member.name}" />
+                                <img className="rounded portraits-front" src={this.props.image} alt="${member.name}" />
                             </div>
 
                             <div onClick={this.handleClick} className='portraits rounded portraits-back'>
-                                This is the back of the card.
+                                {this.props.description}
                             </div>
                         </ReactCardFlip>
                         <Card.Body>
                             <Card.Title>
-                                Elena Ivanov
+                                {this.props.name}
                             </Card.Title> <Card.Text>
 
-                                Strategist -<span data-tip data-for="registerTip">
-                                    Alumni Relations
+                                {this.props.title} -<span data-tip data-for="registerTip">
+                                    {this.props.department}
                                 </span>
                             </Card.Text>
 
