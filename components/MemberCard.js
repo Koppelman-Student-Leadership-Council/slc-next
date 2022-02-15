@@ -27,6 +27,7 @@ export default class MemberCard extends React.Component {
 
         };
         this.handleClick = this.handleClick.bind(this);
+        // addDots = this.props.description.length > 350 ? "...": "";
     }
 
 
@@ -34,7 +35,6 @@ export default class MemberCard extends React.Component {
         e.preventDefault();
         this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
     }
-
     render() {
         return (
             <><div className='shadow p-2 wrap-content rounded'>
@@ -47,7 +47,7 @@ export default class MemberCard extends React.Component {
                             </div>
 
                             <div onClick={this.handleClick} className='portraits rounded portraits-back'>
-                                {this.props.description}
+                                {this.props.description.substring(0,350)}{this.props.description.length > 350 ? "...": ""}
                             </div>
                         </ReactCardFlip>
                         <Card.Body>
