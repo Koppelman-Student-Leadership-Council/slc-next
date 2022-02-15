@@ -49,10 +49,21 @@ function HomePage({ calendarPreData }) {
                         endAt: event.event_date_ends,
                         summary: event.title
                     });
+                    removeDuplicateEvents(events);
                 }
             }
         )
         setEvents(events)
+    }
+
+    function removeDuplicateEvents(events){
+        let uniqueEvents = []
+        events.forEach((event)=>{
+            if(!uniqueEvents.includes(event)){
+                uniqueEvents.push(event)
+            }
+        })
+        setEvents(uniqueEvents)
     }
 
     return <>
