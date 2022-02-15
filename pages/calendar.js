@@ -49,22 +49,26 @@ function HomePage({ calendarPreData }) {
                         endAt: event.event_date_ends,
                         summary: event.title
                     });
-                    removeDuplicateEvents(events);
+                    events = removeDuplicateEvents(events);
+                    console.log(events)
                 }
             }
         )
         setEvents(events)
     }
 
-    function removeDuplicateEvents(events){
-        let uniqueEvents = []
-        events.forEach((event)=>{
-            if(!uniqueEvents.includes(event)){
-                uniqueEvents.push(event)
-            }
-        })
-        setEvents(uniqueEvents)
+    function removeDuplicateEvents(events) {
+
+        const seen = new Set();
+        const filteredArr = events.filter(el => {
+            const duplicate = seen.has(el.id);
+            seen.add(el.id);
+            return !duplicate;
+        });
+        console.log(filteredArr)
+        return (filteredArr)
     }
+
 
     return <>
         <Layout>
