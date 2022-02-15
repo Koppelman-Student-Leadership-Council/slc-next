@@ -16,7 +16,6 @@ export default function LayoutOne(props) {
                 <meta name="author" content="Koppelman Student Leadership Council" />
             </Head>
             <body className="pb-5" >
-
                 <Header />
                 <div className=" container mx-auto px-5">
                     {props.children}
