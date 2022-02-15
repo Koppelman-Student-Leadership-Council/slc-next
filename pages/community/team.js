@@ -8,10 +8,10 @@ function HomePage({ membersData }) {
         <Layout>
 
             <PostTitle breadcrumb>Our Team</PostTitle>
-            <div className="row">
+            <div className="row ">
 
                 {membersData.map((member) => {
-                    return <div className="col-md-6 col-lg-3">
+                    return <div className="col-md-6 col-lg-3 mt-1 mb-1">
 
                         <MemberCard image={member.image_link} name={member.name} description={member.description} title={member.title} department={member.department} /></div>
                 })}

@@ -67,7 +67,7 @@ export default class MemberCard extends React.Component {
                         <Card.Body>
                             <Card.Title>
                                 {this.props.name}
-                            </Card.Title> <Card.Text>
+                            </Card.Title> <Card.Text className='card-subtitle' >
 
                                 {this.props.title} - <span data-tip data-for={this.props.name}>
                                     {this.props.department}

@@ -200,3 +200,7 @@
 .portraits-front:hover {
     background-color: #AD4C66;
 }
+
+.card-subtitle{
+    font-size: small;
+}
