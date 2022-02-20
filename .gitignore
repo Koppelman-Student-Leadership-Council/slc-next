@@ -13,6 +13,7 @@
 
 # production
 /build
+makefile
 
 # misc
 .DS_Store
