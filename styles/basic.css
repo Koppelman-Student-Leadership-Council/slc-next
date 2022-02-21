@@ -177,13 +177,15 @@
 }
 
 .wrap-content {
-    
+
     max-width: 250.87px !important;
 }
 
 .portraits-back {
 
     height: 300px !important;
+
+    font-size: small;
 
     background-color: #87807C;
     transition: all .3s ease-in-out 0s;
@@ -193,14 +195,23 @@
     background-color: #AD4C66;
 }
 
+.card-icon-div {
+    float: right;
+
+}
+
+.flex-end {
+    bottom: 0px;
+}
+
 .portraits {
-    max-width: 236.87px !important;
+    width: 236.87px !important;
 }
 
 .portraits-front:hover {
     background-color: #AD4C66;
 }
 
-.card-subtitle{
+.card-subtitle {
     font-size: small;
 }

@@ -3,6 +3,12 @@ import Card from 'react-bootstrap/Card';
 import React from 'react'
 
 import ReactTooltip from "react-tooltip";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+
+// import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
 
 const positionData = {
     "Strategist": "New Comers",
@@ -61,20 +67,25 @@ export default class MemberCard extends React.Component {
                             </div>
 
                             <div onClick={this.handleClick} className='portraits rounded portraits-back'>
-                                {this.props.description.substring(0, 350)}{this.props.description.length > 350 ? "..." : ""}
+                                {this.props.description.substring(0, 569)}{this.props.description.length > 569 ? "..." : ""}
                             </div>
                         </ReactCardFlip>
                         <Card.Body>
                             <Card.Title>
                                 {this.props.name}
                             </Card.Title> <Card.Text className='card-subtitle' >
+                                <div className="row">
+                                    <div className="col-10">
 
-                                {this.props.title} - <span data-tip data-for={this.props.name}>
-                                    {this.props.department}
-                                </span>
+                                        {this.props.title} <br /> <span data-tip data-for={this.props.name}>
+                                            {this.props.department}
+                                        </span>
+                                    </div>
+                                    <div className="col-2 card-icon-div align-self-end">
+                                        <a href={this.props.linkedin} target="_blank" ><FontAwesomeIcon size="2x" icon={faLinkedin} /></a>
+                                    </div>
+                                </div>
                             </Card.Text>
-                            <a href="">
-                                linked </a>
                             <ReactTooltip id={this.props.name} place="bottom" effect="solid" multiline="true" >
                                 <p dangerouslySetInnerHTML={{ __html: departmentData[this.props.department] }}></p>
                             </ReactTooltip>
