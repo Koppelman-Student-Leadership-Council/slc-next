@@ -4,8 +4,19 @@ import Kalend, { CalendarView } from 'kalend'
 import 'kalend/dist/styles/index.css'; // import styles
 import { useEffect, useState } from "react";
 
+import Modal from 'react-modal';
 
 
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+    },
+};
 
 function HomePage({ calendarPreData }) {
     const [data, setData] = useState(null)
@@ -18,9 +29,25 @@ function HomePage({ calendarPreData }) {
         // color: 'blue',
     }])
     let eventsMemory = []
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [modalTitle, setModalTitle] = useState("Title");
+    const [modalDescription, setModalDescription] = useState("Description");
 
+    let subtitle;
     // console.log(calendarPreData)
+    function openModal(e) {
+        console.log(e)
+        setIsOpen(true);
+    }
 
+    function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        subtitle.style.color = '#f00';
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
 
 
     useEffect(() => {
@@ -57,7 +84,7 @@ function HomePage({ calendarPreData }) {
         setEvents(events)
     }
 
-    function eventMemoryHasEventWithID(events ,calendarID) {
+    function eventMemoryHasEventWithID(events, calendarID) {
         const filteredArr = events.filter(el => {
             el.id == calendarID
         });
@@ -79,13 +106,25 @@ function HomePage({ calendarPreData }) {
 
     return <>
         <Layout>
+            <Modal
+                isOpen={modalIsOpen}
+                onAfterOpen={afterOpenModal}
+                onRequestClose={closeModal}
+                style={customStyles}
+                contentLabel="Example Modal"
+            ><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
+                <button onClick={closeModal}>close</button>
+                <div>{modalDescription}</div>
+            </Modal>
             <PostTitle breadcrumb>Calendar</PostTitle>
+            <button onClick={openModal}>Open Modal</button>
             <div className="">
 
                 {documentRendered && <div className="height-50">
                     <Kalend
                         initialView={CalendarView.MONTH}
                         events={events}
+                        onEventClick={(eventInfo) => openModal(eventInfo)}
                     />
                 </div>}
 
