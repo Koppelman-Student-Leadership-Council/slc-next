@@ -29,6 +29,7 @@ function HomePage({ calendarPreData }) {
         // color: 'blue',
     }])
     let eventsMemory = []
+    const [featuredEvents, setFeaturedEvents] = useState({});
     const [modalIsOpen, setIsOpen] = useState(false);
     const [modalTitle, setModalTitle] = useState("Title");
     const [modalDescription, setModalDescription] = useState("Description");
@@ -38,6 +39,16 @@ function HomePage({ calendarPreData }) {
     function openModal(e) {
         console.log(e)
         setIsOpen(true);
+        setModalTitle(e.summary)
+        console.log("testing featured events and matching with event summary")
+        console.log(featuredEvents)
+        const featuredEventSelected = featuredEvents[e.summary]
+        console.log(featuredEventSelected)
+        if (featuredEventSelected) {
+            setModalDescription(featuredEventSelected.description)
+            console.log(featuredEventSelected.description)
+        }
+
     }
 
     function afterOpenModal() {
@@ -62,8 +73,16 @@ function HomePage({ calendarPreData }) {
 
 
         })
+        fetch('https://admin.brooklynslcouncil.com/public/api/events').then((res) => res.json()).then((data) => {
+            // setData(data);
+            // console.log(data);
+            addInformationToEvents(data)
+            setData(data)
 
-    }, [documentRendered])
+
+        })
+
+    }, [])
 
     function appendEvents(events, data) {
         data.forEach(
@@ -74,14 +93,28 @@ function HomePage({ calendarPreData }) {
                         id: event.calendar_id,
                         startAt: event.event_date_starts,
                         endAt: event.event_date_ends,
-                        summary: event.title
+                        summary: event.title,
+                        description: ""
                     });
                     events = removeDuplicateEvents(events);
-                    console.log(events)
+                    // console.log(events)
                 }
             }
         )
         setEvents(events)
+    }
+
+    function addInformationToEvents(data) {
+        let featuedEventsFetch = featuredEvents
+        data.forEach(
+            event => {
+                featuedEventsFetch[event.title] = {
+                    description: event.description
+                }
+            }
+        )
+        setFeaturedEvents(featuedEventsFetch)
+
     }
 
     function eventMemoryHasEventWithID(events, calendarID) {
@@ -101,7 +134,11 @@ function HomePage({ calendarPreData }) {
         });
         console.log(filteredArr)
         return (filteredArr)
-    }
+    } function createMarkup(markup) {
+        return {
+            __html: markup
+        };
+    };
 
 
     return <>
@@ -112,9 +149,9 @@ function HomePage({ calendarPreData }) {
                 onRequestClose={closeModal}
                 style={customStyles}
                 contentLabel="Example Modal"
-            ><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
-                <button onClick={closeModal}>close</button>
-                <div>{modalDescription}</div>
+            >
+                <button onClick={closeModal}>close</button><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
+                <div><div dangerouslySetInnerHTML={createMarkup(modalDescription)}></div></div>
             </Modal>
             <PostTitle breadcrumb>Calendar</PostTitle>
             <button onClick={openModal}>Open Modal</button>

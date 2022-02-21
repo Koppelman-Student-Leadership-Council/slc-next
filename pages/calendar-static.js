@@ -36,20 +36,30 @@ function HomePage({ calendarPreData }) {
 
         })
 
+        fetch('https://admin.brooklynslcouncil.com/public/api/events').then((res) => res.json()).then((data) => {
+            // setData(data);
+            // console.log(data);
+            appendEventsInformation(events, data)
+
+
+        })
+
     }, [documentRendered])
+
+    function appendEventsInformation(events, data){
+        console.log(data);
+    }
 
     function appendEvents(events, data) {
         data.forEach(
             event => {
-                if (!eventsMemory.includes(data.calendar_id)) {
-                    eventsMemory.push(data.calendar_id)
+                eventsMemory.push(data.calendar_id)
                     events.push({
                         id: event.calendar_id,
                         startAt: event.event_date_starts,
                         endAt: event.event_date_ends,
                         summary: event.title
                     });
-                }
             }
         )
         setEvents(events)
