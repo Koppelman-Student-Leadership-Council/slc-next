@@ -47,26 +47,37 @@ export default class MemberCard extends React.Component {
 
         };
         this.handleClick = this.handleClick.bind(this);
+        this.handleHover = this.handleHover.bind(this);
         // addDots = this.props.description.length > 350 ? "...": "";
     }
+
 
 
     handleClick(e) {
         e.preventDefault();
         this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
     }
+
+    handleHover(doHover){
+        console.log(`handle hover ${doHover}`)
+        // this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+        this.setState({isFlipped: doHover})
+    }
     render() {
         return (
             <><div className='shadow p-2 wrap-content rounded'>
                 <div className='portraits'>
 
-                    <Card className="no-border ">
-                        <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
-                            <div onClick={this.handleClick} className="portraits ">
+                    <Card onMouseEnter={() => this.handleHover(true)}
+                            onMouseLeave={() => this.handleHover(false)} className="no-border ">
+                        <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal"
+>
+                            <div 
+                             className="portraits ">
                                 <img className="rounded portraits-front" src={this.props.image} alt="${member.name}" />
                             </div>
 
-                            <div onClick={this.handleClick} className='portraits rounded portraits-back'>
+                            <div className='portraits rounded portraits-back'>
                                 {this.props.description.substring(0, 569)}{this.props.description.length > 569 ? "..." : ""}
                             </div>
                         </ReactCardFlip>
