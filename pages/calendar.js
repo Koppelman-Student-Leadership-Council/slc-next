@@ -9,12 +9,13 @@ import Modal from 'react-modal';
 
 const customStyles = {
     content: {
-        top: '50%',
+        top: '25%',
         left: '50%',
         right: 'auto',
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
+        backgroundColor: "white"
     },
 };
 
@@ -51,10 +52,6 @@ function HomePage({ calendarPreData }) {
 
     }
 
-    function afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        subtitle.style.color = '#f00';
-    }
 
     function closeModal() {
         setIsOpen(false);
@@ -143,16 +140,6 @@ function HomePage({ calendarPreData }) {
 
     return <>
         <Layout>
-            <Modal
-                isOpen={modalIsOpen}
-                onAfterOpen={afterOpenModal}
-                onRequestClose={closeModal}
-                style={customStyles}
-                contentLabel="Example Modal"
-            >
-                <button onClick={closeModal}>close</button><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
-                <div><div dangerouslySetInnerHTML={createMarkup(modalDescription)}></div></div>
-            </Modal>
             <PostTitle breadcrumb>Calendar</PostTitle>
             <button onClick={openModal}>Open Modal</button>
             <div className="">
@@ -171,6 +158,16 @@ function HomePage({ calendarPreData }) {
 
             </div>
         </Layout>
+            <Modal
+                isOpen={modalIsOpen}
+                
+                onRequestClose={closeModal}
+                style={customStyles}
+                contentLabel="Example Modal"
+            >
+                <button onClick={closeModal}>close</button><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
+                <div><div dangerouslySetInnerHTML={createMarkup(modalDescription)}></div></div>
+            </Modal>
     </>
 }
 
