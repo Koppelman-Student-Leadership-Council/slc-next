@@ -178,7 +178,7 @@
 
 .wrap-content {
 
-    max-width: 250.87px !important;
+    width: 250.87px !important;
 }
 
 .portraits-back {
@@ -200,9 +200,6 @@
 
 }
 
-.flex-end {
-    bottom: 0px;
-}
 
 .portraits {
     width: 236.87px !important;
