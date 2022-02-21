@@ -82,7 +82,7 @@ export default class MemberCard extends React.Component {
                                         </span>
                                     </div>
                                     <div className="col-2 card-icon-div align-self-end">
-                                        <a href={this.props.linkedin} target="_blank" ><FontAwesomeIcon size="2x" icon={faLinkedin} /></a>
+                                        <a href={this.props.linkedin} rel="noopener noreferrer" target="_blank" ><FontAwesomeIcon size="2x" icon={faLinkedin} /></a>
                                     </div>
                                 </div>
                             </Card.Text>

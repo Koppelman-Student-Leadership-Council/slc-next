@@ -41,7 +41,7 @@ function HomePage({ calendarPreData }) {
     function appendEvents(events, data) {
         data.forEach(
             event => {
-                if (!eventsMemory.includes(event.calendar_id)) {
+                if (!eventMemoryHasEventWithID(events, event.calendar_id)) {
                     eventsMemory.push(event.calendar_id)
                     events.push({
                         id: event.calendar_id,
@@ -55,6 +55,13 @@ function HomePage({ calendarPreData }) {
             }
         )
         setEvents(events)
+    }
+
+    function eventMemoryHasEventWithID(events ,calendarID) {
+        const filteredArr = events.filter(el => {
+            el.id == calendarID
+        });
+        return (filteredArr.length > 0)
     }
 
     function removeDuplicateEvents(events) {
