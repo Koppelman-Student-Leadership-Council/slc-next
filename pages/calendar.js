@@ -33,21 +33,23 @@ function HomePage({ calendarPreData }) {
     const [featuredEvents, setFeaturedEvents] = useState({});
     const [modalIsOpen, setIsOpen] = useState(false);
     const [modalTitle, setModalTitle] = useState("Title");
+    const [modalLink, setModalLink] = useState("");
     const [modalDescription, setModalDescription] = useState("Description");
 
     let subtitle;
     // console.log(calendarPreData)
     function openModal(e) {
-        console.log(e)
+        // console.log(e)
         setIsOpen(true);
-        setModalTitle(e.summary)
-        console.log("testing featured events and matching with event summary")
-        console.log(featuredEvents)
+        // setModalTitle(e.summary)
+        // console.log("testing featured events and matching with event summary")
+        // console.log(featuredEvents)
         const featuredEventSelected = featuredEvents[e.summary]
-        console.log(featuredEventSelected)
+        // console.log(featuredEventSelected)
         if (featuredEventSelected) {
             setModalDescription(featuredEventSelected.description)
-            console.log(featuredEventSelected.description)
+            // console.log(featuredEventSelected.description)
+            setModalLink(featuredEventSelected.item_link)
         }
 
     }
@@ -106,7 +108,8 @@ function HomePage({ calendarPreData }) {
         data.forEach(
             event => {
                 featuedEventsFetch[event.title] = {
-                    description: event.description
+                    description: event.description,
+                    item_link: event.item_link
                 }
             }
         )
@@ -129,7 +132,7 @@ function HomePage({ calendarPreData }) {
             seen.add(el.id);
             return !duplicate;
         });
-        console.log(filteredArr)
+        // console.log(filteredArr)
         return (filteredArr)
     } function createMarkup(markup) {
         return {
@@ -165,8 +168,12 @@ function HomePage({ calendarPreData }) {
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-                <button onClick={closeModal}>close</button><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
-                <div><div dangerouslySetInnerHTML={createMarkup(modalDescription)}></div></div>
+                <button className="float-right" onClick={closeModal}>Close</button><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
+                <br />
+                <div><div dangerouslySetInnerHTML={createMarkup(modalDescription)}></div>
+                <a target="_blank" rel="noopener noreferrer"  href={modalLink}>RSVP/More Info</a>
+                
+                </div>
             </Modal>
     </>
 }
