@@ -171,7 +171,7 @@ function HomePage({ calendarPreData }) {
                 <button className="float-right" onClick={closeModal}>Close</button><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
                 <br />
                 <div><div dangerouslySetInnerHTML={createMarkup(modalDescription)}></div>
-                <a target="_blank" rel="noopener noreferrer"  href={modalLink}>RSVP/More Info</a>
+                {modalLink && <a target="_blank" rel="noopener noreferrer"  href={modalLink}>RSVP/More Info</a>}
                 
                 </div>
             </Modal>
