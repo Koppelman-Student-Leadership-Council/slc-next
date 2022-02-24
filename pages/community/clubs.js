@@ -2,8 +2,6 @@ import Layout from "../../components/Layout";
 import PostTitle from "../../components/post-title";
 import Partnership from "../../components/partnership";
 
-// import Clubs from '../../data/clubs.json';
-
 function HomePage({clubsData}) {
     console.log(clubsData);
     return <>
