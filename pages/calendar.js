@@ -48,6 +48,7 @@ function HomePage({ calendarPreData }) {
         // console.log(featuredEventSelected)
         if (featuredEventSelected) {
             setModalDescription(featuredEventSelected.description)
+            setModalTitle(featuredEventSelected.title)
             // console.log(featuredEventSelected.description)
             setModalLink(featuredEventSelected.item_link)
         }
@@ -108,6 +109,7 @@ function HomePage({ calendarPreData }) {
         data.forEach(
             event => {
                 featuedEventsFetch[event.title] = {
+                    title: event.title,
                     description: event.description,
                     item_link: event.item_link
                 }
@@ -144,7 +146,6 @@ function HomePage({ calendarPreData }) {
     return <>
         <Layout>
             <PostTitle breadcrumb>Calendar</PostTitle>
-            <button onClick={openModal}>Open Modal</button>
             <div className="">
 
                 {documentRendered && <div className="height-50">
