@@ -2,20 +2,31 @@ import Layout from "../../components/Layout";
 import PostTitle from "../../components/post-title";
 import Partnership from "../../components/partnership";
 
-import Clubs from '../../data/clubs.json';
+// import Clubs from '../../data/clubs.json';
 
-function HomePage() {
-    console.log(Clubs);
+function HomePage({clubsData}) {
+    console.log(clubsData);
     return <>
         <Layout>
             <PostTitle breadcrumb>Our Clubs</PostTitle>
             <div className="row">
-                {Clubs.map((club)=>{
-                   return  <Partnership key={club["imagename"]} title={club["title"]} link={club['link']} imageLink={"/assets/clubs/resized/"+club['imagename']+".png"} />
+                {clubsData.map((club)=>{
+                   return  <Partnership key={club["image_link"]} title={club["title"]} link={club['link']} imageLink={club["image_link"]} />
                 })}
             </div>
         </Layout>
     </>
 }
+
+export async function getStaticProps() {
+    const res = await fetch('https://admin.brooklynslcouncil.com/public/api/clubs')
+    const clubsData = await res.json()
+    return {
+        props: {
+            clubsData,
+        },
+    }
+}
+
 
 export default HomePage
