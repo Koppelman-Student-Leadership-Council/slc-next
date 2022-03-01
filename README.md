@@ -1,28 +1,25 @@
+# SLC Next.js
+This is a website created to for Brooklyn College's Student Leadership Council.
+
+### How to run on your local machine
 
 First, run the development server:
 ```bash
 yarn run dev
 ```
+### Details
+This site is in production:
+https://brooklynslcouncil.com/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can edit the content of the webiste through our admin panel:
+https://admin.brooklynslcouncil.com/public/admin
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Editable content:
+- Members
+- Clubs
+- Calendar Events
+- Events Page (WIP)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Credits
+The site uses the styling and overall design from the previous SLC website: 
+created by former SLC Tech Director [Mohammad Hossain](https://github.com/mohhossain) and his team.
