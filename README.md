@@ -1,4 +1,4 @@
-# SLC Next.js
+# SLC Website (Next.js)
 This is a website created to for Brooklyn College's Student Leadership Council.
 
 ### How to run on your local machine
