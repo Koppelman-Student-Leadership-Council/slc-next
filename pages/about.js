@@ -4,6 +4,8 @@ import SideCenterAbout from "../components/sidec-about"
 import SideLeftAboutTitle from "../components/sidel-about-title"
 import SideRightAboutTitle from "../components/sider-about-title"
 
+
+
 function HomePage() {
     return <>
         <Layout>

@@ -8,9 +8,10 @@ export default function sidedAbout({ content, image, title }) {
                 <h2 className="text-2xl lg:text-3xl">{title}</h2>
                 <p>{content}</p>
             </div>
-            <div className="col-md-4 justify-content-center align-self-center ">
+            {image && <div className="col-md-4 justify-content-center align-self-center ">
                 <img src={image} className="height-250 rounded-10" alt={title} />
-            </div>
+            </div>}
+            
         </div>
     </>);
 }
