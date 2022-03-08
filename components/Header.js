@@ -36,6 +36,7 @@ export default function Header({ container }) {
                                 <NavLink href="/events/business-matters" className="dropdown-item" >Business Matters</NavLink>
                                 <NavLink href="/events/summit" className="dropdown-item" >KSB Summit</NavLink>
                                 <NavLink href="/events/learn-more" className="dropdown-item" >Learn More</NavLink>
+                                <NavLink href="/events/s&c-automation" className="dropdown-item" >S&C Automation</NavLink>
 
                             </ul>
                         </li>
