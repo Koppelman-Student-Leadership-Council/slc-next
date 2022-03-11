@@ -12,7 +12,7 @@ function HomePage() {
             <PostTitle breadcrumb>Who We Are</PostTitle>
             <div className="">
                 <br />
-                <div className=" row shadow-big hover:shadow-medium transition-shadow duration-200 height-is250">
+                <div className=" row shadow-big hover:shadow-medium transition-shadow duration-200 height-is250 rounded-10">
                     <div className="justify-content-center align-self-center">
                         <p>The purpose of the Student Leadership Council (SLC) is two-fold: <b>(1)</b> To enrich the campus experience of Koppelman School of Business students and promote their involvement in activities designed to enhance their professional and personal development and <b>(2)</b> to help raise the visibility of the Koppelman School of Business. Members of the SLC are ambassadors and serve as a liaison between business students and the KSB Dean.</p>
                     </div>

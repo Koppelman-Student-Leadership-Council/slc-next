@@ -212,3 +212,7 @@
 .card-subtitle {
     font-size: small;
 }
+
+.no-right-margin {
+    margin-right: -12px !important;
+}
