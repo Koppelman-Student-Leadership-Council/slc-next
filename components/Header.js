@@ -16,7 +16,7 @@ export default function Header({ container }) {
                     />
                     {/* <img className="logo" src="/assets/logo.png" alt="Koppelman Student Leadership Council" /> */}
                 </a></Link>
-                <button className="navbar-toggler no-border" align="right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler border-none" align="right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -51,7 +51,7 @@ export default function Header({ container }) {
                             </ul>
                         </li>
                         <li >
-                            <a className="btn btn-outline-light slc-hover-background ml-2" href="https://form.typeform.com/to/ImW405p0" target="_blank" rel="noopener noreferrer">Subscribe Us</a>
+                            <a className="btn btn-outline-light hover:bg-[#AD4C66] hover:border-[#AD4C66] ml-2" href="https://form.typeform.com/to/ImW405p0" target="_blank" rel="noopener noreferrer">Subscribe Us</a>
                         </li>
                     </ul>
                 </div>
