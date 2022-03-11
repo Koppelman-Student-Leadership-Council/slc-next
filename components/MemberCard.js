@@ -69,7 +69,7 @@ export default class MemberCard extends React.Component {
                 <div className='portraits'>
 
                     <Card onMouseEnter={() => this.handleHover(true)}
-                            onMouseLeave={() => this.handleHover(false)} className="border-none">
+                            onMouseLeave={() => this.handleHover(false)} className="no-border ">
                         <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal"
 >
                             <div 

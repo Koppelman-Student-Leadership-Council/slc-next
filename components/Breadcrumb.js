@@ -39,7 +39,7 @@ const Breadcrumbs = () => {
         <nav aria-label="breadcrumbs">
             <ol className="breadcrumb bg-white">
                 <li className="text-xl font-bold text-decoration-none ">
-                    <Link href="/"  ><a className="text-decoration-none text-secondary hover:text-black">Home</a></Link>
+                    <Link href="/"  ><a className="text-decoration-none text-secondary dark-text-hover">Home</a></Link>
                 </li>
                 {breadcrumbs.map((breadcrumb, i) => {
                     return (
@@ -48,7 +48,7 @@ const Breadcrumbs = () => {
                             <p className="text-xl font-bold text-decoration-none text-secondary ">&nbsp;/&nbsp;</p>
                             <li key={breadcrumb.href} className="text-xl font-bold text-decoration-none " >
                                 <Link href={breadcrumb.href}>
-                                    <a className="text-decoration-none text-secondary hover:text-black" >
+                                    <a className="text-decoration-none text-secondary dark-text-hover" >
                                         {capitalizeFirstLetter(convertBreadcrumb(breadcrumb.breadcrumb))}
                                     </a>
                                 </Link>
