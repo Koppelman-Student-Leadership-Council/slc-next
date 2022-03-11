@@ -1,46 +1,48 @@
-/* .nav-dark-bg {
+.nav-dark-bg {
     background-color: rgba(0, 0, 0, .4)
-} */
+}
 
-/* .container-slc {
+.container-slc {
     padding-left: 15%;
     padding-right: 15%;
-} */
+}
 
-/* .slc-hover-background:hover {
+.shadow-big {}
+
+.slc-hover-background:hover {
 
     background: #AD4C66 !important;
     border-color: #AD4C66;
-} */
+}
 
-/* .dark-text-hover:hover {
+.dark-text-hover:hover {
     color: black !important;
-} */
+}
 
-/* .white-color {
+.white-color {
     color: blanchedalmond !important;
-} */
+}
 
 
-/* .no-border {
+.no-border {
     border: none;
-} */
+}
 
-/* .height-250 {
+.height-250 {
     margin: auto;
     max-height: 250px;
     align-self: center;
-} */
+}
 
-/* .height-is250 {
+.height-is250 {
     min-height: 200px;
     margin: auto;
     align-self: center;
-} */
+}
 
-/* .height-50 {
+.height-50 {
     height: 500px;
-} */
+}
 
 .link {
     position: relative;
@@ -209,8 +211,4 @@
 
 .card-subtitle {
     font-size: small;
-}
-
-.no-right-margin {
-    margin-right: -20px !important;
 }
