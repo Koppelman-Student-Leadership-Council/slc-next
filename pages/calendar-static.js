@@ -70,7 +70,7 @@ function HomePage({ calendarPreData }) {
             <PostTitle breadcrumb>Calendar</PostTitle>
             <div className="">
 
-                {documentRendered && <div className="height-50">
+                {documentRendered && <div className="h-[500px]">
                     <Kalend
                         initialView={CalendarView.MONTH}
                         events={events}
@@ -78,7 +78,7 @@ function HomePage({ calendarPreData }) {
                 </div>}
 
                 {!documentRendered &&
-                    <div className="height-50 content-center center-content" ><div>Retrieving Calendar Events...</div>
+                    <div className="h-[500px] content-center center-content" ><div>Retrieving Calendar Events...</div>
                     </div>}
 
             </div>
