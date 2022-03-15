@@ -15,7 +15,7 @@ function HomePage() {
                 <div className=" row shadow-big min-h-[150px] m-auto self-center rounded-10 pt-3">
                     <div className="justify-content-center align-self-center text-center">
                         <p className="text-2xl lg:text-3xl">The purpose of the Student Leadership Council (SLC) is <b>two-fold:</b></p>
-                        <div class="">
+                        <div >
                             <p><b>(1)</b> To enrich the campus experience of Koppelman School of Business students and promote their involvement in activities designed to enhance their professional and personal development and <b>(2)</b> to help raise the visibility of the Koppelman School of Business.</p>
                         </div>
                     </div>
