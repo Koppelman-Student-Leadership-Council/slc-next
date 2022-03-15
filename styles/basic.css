@@ -214,3 +214,19 @@
 .no-right-margin {
     margin-right: -20px !important;
 }
+
+/* https://dev.to/dailydevtips1/tailwind-zooming-background-images-2bk0?utm_source=dormosheio&utm_campaign=dormosheio */
+.card-zoom {
+    @apply items-center justify-center m-5 -mt-[10px] overflow-hidden shadow-xl w-fit h-fit rounded-2xl;
+}
+
+.card-zoom-image {
+    @apply w-full h-full transition-all duration-[5s] ease-in-out transform bg-center bg-cover;
+}
+
+.group-h1:hover .card-zoom-image {
+    @apply scale-105;
+}
+.group-h1:hover .card-zoom-text {
+    @apply scale-100;
+}

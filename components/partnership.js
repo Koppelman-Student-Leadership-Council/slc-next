@@ -8,7 +8,7 @@ export default function Partnership({
     imageLink
 }) {
     return (
-        <div className=" col-md-3 mb-2 rounded-10" >
+        <div className=" col-md-3 mb-2 rounded-10 text-2xl font-medium" >
             <div className=" content  ">
                 <a target="_blank" href={link} rel="noopener noreferrer">
                     <a>
