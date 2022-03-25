@@ -42,6 +42,10 @@
     height: 500px;
 } */
 
+.minw368 {
+    min-width: 368px;
+}
+
 .link {
     position: relative;
     white-space: nowrap;
@@ -227,6 +231,7 @@
 .group-h1:hover .card-zoom-image {
     @apply scale-105;
 }
+
 .group-h1:hover .card-zoom-text {
     @apply scale-100;
 }
