@@ -6,11 +6,12 @@ export default function PostPreview({
   coverImage,
   excerpt,
   slug,
+  link
 }) {
   return (
     <div className="group p-3 shadow-big hover:shadow-medium transition-shadow duration-200 rounded-10">
       <div className="mb-5">
-        <Link as={`/events/${slug}`} href={`/events/${slug}`}>
+        <Link as={link ? `${link}` : `/events/${slug}`} href={`/events/${slug}`}>
           <a>
             <CoverImage slug={slug} title={title} src={coverImage} postUrl={"programs"} />
           </a>
