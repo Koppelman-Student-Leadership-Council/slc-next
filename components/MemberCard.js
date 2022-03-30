@@ -79,8 +79,8 @@ export default class MemberCard extends React.Component {
                                 <img className="rounded portraits-front" src={this.props.image} alt="${member.name}" />
                             </div>
 
-                            <div className='portraits rounded portraits-back'>
-                                {this.props.description.substring(0, 569)}{this.props.description.length > 569 ? "..." : ""}
+                            <div className='portraits rounded portraits-back '>
+                                <p className='text-justify p-2' >{this.props.description.substring(0, 569)}{this.props.description.length > 569 ? "..." : ""}</p>
                             </div>
                         </ReactCardFlip>
                         <Card.Body>
