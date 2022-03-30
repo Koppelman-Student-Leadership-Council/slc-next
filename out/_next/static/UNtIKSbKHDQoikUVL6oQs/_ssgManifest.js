@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002Fcommunity\u002Fteam","\u002Fcommunity\u002Fclubs","\u002Fcalendar","\u002Fcalendar-static"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
