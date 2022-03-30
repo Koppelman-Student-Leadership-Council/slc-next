@@ -5,7 +5,7 @@ import SideRightAboutTitle from "../../components/sider-about-title"
 
 
 const departments=[
-    "Alumni Relations", "Club & Faculty Relations", "Technology", "Marketing"
+    "Operations","Alumni Relations", "Club & Faculty Relations", "Technology", "Marketing"
 ]
 
 const departmentData = {
@@ -29,7 +29,7 @@ const departmentData = {
         "making flyers, interacting with KBS students online and being the brand ambassadors for SLC. There’s always something " +
         " new to do in marketing, with creativity and invitation the marketing team is always searching for new ways to improve and advance " +
         " the student outreach strategy.",
-    "Executive Team": ""
+    "Executive Team": " Their responsibility is to work with the team to create a carefully selected plan for the upcoming semester to promote community involvement and professional development on campus! Here at the council, we work intrinsically to grow our team’s leadership skills and develop their soft skills to set them up for a successful career!"
 }
 
 function HomePage() {
@@ -41,11 +41,13 @@ function HomePage() {
                     The Student Leadership Council aims to cultivate the leadership potential of all our members. We offer a unique platform for idea-sharing and development, access to senior administrators in the KSB, and encourage peer-to-peer mentoring.We encourage our members to strive for more in their careers, academics, and in their communities.</p>
             </div>
 
+
             <br /><FullDetailAbout title={departments[0]}  content={departmentData[departments[0]]} />
             <br /><FullDetailAbout title={departments[1]}  content={departmentData[departments[1]]} />
             <br /><FullDetailAbout title={departments[2]}  content={departmentData[departments[2]]} />
             <br /><FullDetailAbout title={departments[3]}  content={departmentData[departments[3]]} />
-            <br /><FullDetailAbout title={departments[3]}  content={departmentData[departments[3]]} />
+            <br /><FullDetailAbout title={departments[4]}  content={departmentData[departments[4]]} />
+            <br /><FullDetailAbout title={departments[5]}  content={departmentData[departments[5]]} />
              
                 
 

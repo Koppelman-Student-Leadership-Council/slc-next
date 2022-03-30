@@ -35,7 +35,9 @@ const departmentData = {
         "making flyers, interacting with KBS students online and being the brand ambassadors for SLC. There’s always something <br />" +
         " new to do in marketing, with creativity and invitation the marketing team is always searching for new ways to improve and advance <br />" +
         " the student outreach strategy.",
-    "Executive Team": ""
+        "Executive Team": " Executives work with the team to create a carefully selected plan for the upcoming semester  <br />" +
+        "to promote community involvement and professional development on campus! Here at the council, we work intrinsically to grow the team’s  <br />" +
+        "leadership skills and develop their soft skills to set them up for a successful career!"
 }
 
 
