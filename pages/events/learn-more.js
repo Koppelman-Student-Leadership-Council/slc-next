@@ -9,6 +9,7 @@ const departments=[
 ]
 
 const departmentData = {
+    "Operations": "The Operations Department is responsible for creating the highest level of efficiency possible within the SLC. As a Department, we directly assist the Executive Team with daily operations, including scheduling, close monitoring of deadlines, and task delegation. The Operations Department is responsible for recording impact-focused minutes and key accomplishments/decisions made during the meetings. We aim to ensure that all operations processes when organizing an event are carried out most appropriately. Some of those processes are: creating a day of task and event structures for signature events, reserving space and equipment for events and meetings, and managing zoom events.",
     "Alumni Relations": "The Alumni Relations Department is responsible for fostering relationships with SLC’s " +
         "alumni network and creating an engaged and supportive connection between former and current SLC members. " +
         "SLC’s alumni network consists of diverse members in terms of experience, industries and exposure. The department  " +
@@ -43,6 +44,7 @@ function HomePage() {
             <br /><FullDetailAbout title={departments[0]}  content={departmentData[departments[0]]} />
             <br /><FullDetailAbout title={departments[1]}  content={departmentData[departments[1]]} />
             <br /><FullDetailAbout title={departments[2]}  content={departmentData[departments[2]]} />
+            <br /><FullDetailAbout title={departments[3]}  content={departmentData[departments[3]]} />
             <br /><FullDetailAbout title={departments[3]}  content={departmentData[departments[3]]} />
              
                 
