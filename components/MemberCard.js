@@ -94,7 +94,7 @@ export default class MemberCard extends React.Component {
                                             {this.props.department}
                                         </span>
                                     </div>
-                                    {this.props.linkdin ? <div className="col-2 card-icon-div align-self-end">
+                                    {this.props.linkedin ? <div className="col-2 card-icon-div align-self-end">
                                         <a href={this.props.linkedin} rel="noopener noreferrer" target="_blank" ><FontAwesomeIcon size="2x" icon={faLinkedin} /></a>
                                     </div> : <></>}
                                 </div>
