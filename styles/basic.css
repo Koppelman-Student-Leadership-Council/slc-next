@@ -230,3 +230,10 @@
 .group-h1:hover .card-zoom-text {
     @apply scale-100;
 }
+
+.group-h2:hover .card-zoom-image {
+    @apply scale-110;
+}
+.group-h2:hover .card-zoom-text {
+    @apply scale-100;
+}

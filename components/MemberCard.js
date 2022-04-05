@@ -70,10 +70,8 @@ export default class MemberCard extends React.Component {
 
                     <Card onMouseEnter={() => this.handleHover(true)}
                             onMouseLeave={() => this.handleHover(false)} className="border-none">
-                        <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal"
->
-                            <div 
-                             className="portraits ">
+                        <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
+                            <div className="portraits ">
                                 <img className="rounded portraits-front" src={this.props.image} alt="${member.name}" />
                             </div>
 
