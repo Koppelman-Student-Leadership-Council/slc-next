@@ -35,7 +35,9 @@ const departmentData = {
         "making flyers, interacting with KBS students online and being the brand ambassadors for SLC. There’s always something <br />" +
         " new to do in marketing, with creativity and invitation the marketing team is always searching for new ways to improve and advance <br />" +
         " the student outreach strategy.",
-    "Executive Team": ""
+    "Executive Team": " Executives work with the team to create a carefully selected plan for the upcoming semester  <br />" +
+        "to promote community involvement and professional development on campus! Here at the council, we work intrinsically to grow the team’s  <br />" +
+        "leadership skills and develop their soft skills to set them up for a successful career!"
 }
 
 
@@ -58,10 +60,10 @@ export default class MemberCard extends React.Component {
         this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
     }
 
-    handleHover(doHover){
+    handleHover(doHover) {
         console.log(`handle hover ${doHover}`)
         // this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
-        this.setState({isFlipped: doHover})
+        this.setState({ isFlipped: doHover })
     }
     render() {
         return (
@@ -69,14 +71,16 @@ export default class MemberCard extends React.Component {
                 <div className='portraits'>
 
                     <Card onMouseEnter={() => this.handleHover(true)}
-                            onMouseLeave={() => this.handleHover(false)} className="border-none">
-                        <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
-                            <div className="portraits ">
+                        onMouseLeave={() => this.handleHover(false)} className="border-none">
+                        <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal"
+                        >
+                            <div
+                                className="portraits ">
                                 <img className="rounded portraits-front" src={this.props.image} alt="${member.name}" />
                             </div>
 
-                            <div className='portraits rounded portraits-back'>
-                                {this.props.description.substring(0, 569)}{this.props.description.length > 569 ? "..." : ""}
+                            <div className='portraits rounded portraits-back '>
+                                <p className='text-justify p-2' >{this.props.description.substring(0, 569)}{this.props.description.length > 569 ? "..." : ""}</p>
                             </div>
                         </ReactCardFlip>
                         <Card.Body>
@@ -90,9 +94,9 @@ export default class MemberCard extends React.Component {
                                             {this.props.department}
                                         </span>
                                     </div>
-                                    <div className="col-2 card-icon-div align-self-end">
+                                    {this.props.linkedin ? <div className="col-2 card-icon-div align-self-end">
                                         <a href={this.props.linkedin} rel="noopener noreferrer" target="_blank" ><FontAwesomeIcon size="2x" icon={faLinkedin} /></a>
-                                    </div>
+                                    </div> : <></>}
                                 </div>
                             </Card.Text>
                             <ReactTooltip id={this.props.name} place="bottom" effect="solid" multiline="true" >
