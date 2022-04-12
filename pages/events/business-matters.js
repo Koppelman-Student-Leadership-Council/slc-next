@@ -7,7 +7,7 @@ function HomePage() {
         <Layout>
             <PostTitle breadcrumb>Business Matters</PostTitle>
             <div className="group-h1 grid justify-items-center">
-                <div className="card-zoom">
+                <div className="card-zoom-h1">
                     <CoverImage src="/assets/programs/business-matters.png"/>
                 </div>
                 <div className="text-center text-lg">

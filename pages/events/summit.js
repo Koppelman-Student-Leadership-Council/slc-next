@@ -7,7 +7,7 @@ function HomePage() {
         <Layout>
             <PostTitle breadcrumb>KSB Summit</PostTitle>
             <div className="group-h1 grid justify-items-center">
-                <div className="card-zoom">
+                <div className="card-zoom-h1">
                     <CoverImage src="\assets\programs\ksb-summit.png" />
                 </div>
                 <div className="text-center text-lg">

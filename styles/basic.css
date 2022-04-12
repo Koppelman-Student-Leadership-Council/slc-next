@@ -220,25 +220,38 @@
 }
 
 /* https://dev.to/dailydevtips1/tailwind-zooming-background-images-2bk0?utm_source=dormosheio&utm_campaign=dormosheio */
-.card-zoom {
+
+.card-zoom-h1 {
     @apply items-center justify-center m-5 -mt-[10px] overflow-hidden shadow-xl w-fit h-fit rounded-2xl;
 }
 
-.card-zoom-image {
+.card-zoom-image-h1 {
     @apply w-full h-full transition-all duration-[5s] ease-in-out transform bg-center bg-cover;
 }
 
-.group-h1:hover .card-zoom-image {
+.card-zoom-h2 {
+    @apply relative flex items-center justify-center m-3 overflow-hidden transition-all w-64 h-72 rounded-2xl shadow duration-500;
+}
+
+.card-zoom-image-h2 {
+    @apply absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover -mt-3;
+}
+
+.card-zoom-text-h2 {
+    @apply absolute text-5xl font-black transition-all duration-500 ease-in-out transform scale-50 text-black opacity-0 text-center;
+}
+
+.group-h1:hover .card-zoom-image-h1 {
     @apply scale-105;
 }
 
-.group-h1:hover .card-zoom-text {
-    @apply scale-100;
+.group-h2:hover .card-zoom-h2 { 
+    @apply shadow-lg /*bg-[#882345]*/;
 }
 
-.group-h2:hover .card-zoom-image {
-    @apply scale-110;
+.group-h2:hover .card-zoom-image-h2 {
+    @apply scale-125 opacity-30;
 }
-.group-h2:hover .card-zoom-text {
-    @apply scale-100;
+.group-h2:hover .card-zoom-text-h2 {
+    @apply scale-75 opacity-100;
 }

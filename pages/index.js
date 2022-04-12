@@ -13,9 +13,8 @@ import JoinButton from '../components/btn-join-slc'
 function HomePage() {
   return <>
     <Layout>
-      <PostTitle>Welcome <br />
-        To The <br />
-        Koppelman Student <span className="slc-color" >Leadership</span> Council</PostTitle>
+      <PostTitle>Welcome To The <br />
+        Koppelman Student <span className="slc-color">Leadership</span> Council</PostTitle>
       <PostSubTitle>
         &quot;The Leaders of Tomorrow&quot;
       </PostSubTitle>
