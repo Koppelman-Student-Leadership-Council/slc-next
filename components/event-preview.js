@@ -9,7 +9,10 @@ export default function PostPreview({
   link
 }) {
   return (
-    <div className="group p-3 shadow-big hover:shadow-medium transition-shadow duration-200 rounded-10">
+    <div className="
+    group p-3 shadow-big transition-all duration-200 rounded-10 shadow-md
+    2xl:shadow-none 2xl:hover:shadow-lg
+    ">
       <div className="mb-5">
         <Link as={link ? `${link}` : `/events/${slug}`} href={`/events/${slug}`}>
           <a>
