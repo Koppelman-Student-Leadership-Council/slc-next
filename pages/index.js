@@ -11,7 +11,7 @@ import JoinButton from '../components/btn-join-slc'
 
 
 function HomePage() {
-  return <>
+  return <div>
     <Layout>
       <PostTitle>Welcome To The <br />
         Koppelman Student <span className="slc-color">Leadership</span> Council</PostTitle>
@@ -35,7 +35,7 @@ The purpose of the Student Leadership Council is to enrich the campus experience
 
 
     </Layout>
-  </>
+  </div>
 }
 
 export default HomePage
