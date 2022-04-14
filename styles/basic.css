@@ -54,15 +54,78 @@
 
 .link::before,
 .link::after {
-    position: absolute;
-    width: 100%;
+    /* position: absolute;
+    width: 80%;
     height: 3px;
     background: #AD4C66;
     top: 100%;
-    left: 0;
-    pointer-events: none;
+    left: 10%;
+    pointer-events: none; */
 }
 
+.link::before {
+    content: '';
+    /* animation: lineOnLoad .3s ease-in-out 0s 1 forwards; */
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background: #AD4C66;
+    top: 100%;
+    left: 10%;
+    pointer-events: none;
+    /* show by default */
+}
+
+@keyframes lineOnLoad {
+    0% {
+        transform: scale3d(0, 1, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.link--metis {
+    /* font-family: bely-display, sans-serif;
+    text-transform: lowercase; */
+}
+
+.link-light {
+    color: rgb(207, 207, 207) !important;
+}
+
+.link-light:hover {
+    color: white !important;
+}
+
+
+.link-light.active {
+    color: white !important;
+}
+
+@media (min-width: 1025px) {  
+    .link::before {
+        content: '';
+        animation: 0;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #AD4C66;
+        top: 100%;
+        left: 0;
+        pointer-events: none;
+        /* show by default */
+    } 
+    .link--metis:hover::before {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+    }
+    .link--metis::before {
+        transform-origin: 100% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: transform 0.3s;
+    }
+}
 
 .btn-slc {
     display: inline-block;
@@ -116,27 +179,6 @@
     color: #AD4C66;
 }
 
-.link::before {
-    content: '';
-    /* show by default */
-}
-
-.link--metis {
-    /* font-family: bely-display, sans-serif;
-    text-transform: lowercase; */
-}
-
-.link--metis::before {
-    transform-origin: 100% 50%;
-    transform: scale3d(0, 1, 1);
-    transition: transform 0.3s;
-}
-
-.link--metis:hover::before {
-    transform-origin: 0% 50%;
-    transform: scale3d(1, 1, 1);
-}
-
 .rounded-10 {
     border-radius: 10px;
 }
@@ -144,19 +186,6 @@
 .logo {
     max-height: 150px;
     margin-left: -5px;
-}
-
-.link-light {
-    color: rgb(207, 207, 207) !important;
-}
-
-.link-light:hover {
-    color: white !important;
-}
-
-
-.link-light.active {
-    color: white !important;
 }
 
 .portraits-front {
@@ -226,7 +255,7 @@
 }
 
 .card-zoom-image-h1 {
-    @apply w-full h-full transition-all duration-[5s] ease-in-out transform bg-center bg-cover;
+    @apply w-full h-full transition-all duration-[3s] ease-in-out transform bg-center bg-cover;
 }
 
 .card-zoom-h2 {
@@ -241,8 +270,18 @@
     @apply absolute text-5xl font-black transition-all duration-500 ease-in-out transform scale-50 text-black opacity-0 text-center;
 }
 
-.group-h1:hover .card-zoom-image-h1 {
-    @apply scale-105;
+.group-h1 .card-zoom-image-h1 {
+    animation: card-zoom-h1-ani 3s ease-in-out 0s 1 forwards;
+    /* @apply lg:scale-105; */
+}
+
+@keyframes card-zoom-h1-ani {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
 }
 
 .group-h2:hover .card-zoom-h2 { 

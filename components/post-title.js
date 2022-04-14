@@ -5,16 +5,16 @@ import Breadcrumbs from "./Breadcrumb"
 export default function PostTitle({ children, breadcrumb }) {
   return (
     <>
-      <div className="" >
+      <div className="">
         <br />
         {breadcrumb && <Breadcrumbs/>}
         <br />
         <h1 className="
-        -mt-[20px] link link--metis text-center font-bold tracking-tighter leading-tight ml-2 text-4xl
+        -mt-[20px] link link--metis text-center font-bold tracking-tighter leading-tight text-4xl
         mm:text-5xl
-        ml:text-6xl
+        5h:text-6xl
         md:text-7xl 
-        lg:text-8xl lg:mb-3
+        lg:text-8xl lg:mb-3 lg:w-auto
         ">
           {children}
         </h1>

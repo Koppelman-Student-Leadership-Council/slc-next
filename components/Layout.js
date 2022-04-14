@@ -15,14 +15,14 @@ export default function LayoutOne(props) {
                 <meta name="description" content="The SLC aims to inspire and encourage students to take the lead in their personal and professional lives. We aim to ensure students are equipped with the resources and knowledge they need to dive into their professional careers." />
                 <meta name="author" content="Koppelman Student Leadership Council" />
             </Head>
-            <body className="pb-5" >
+            <body className="pb-5">
                 <Header />
-                <div className=" container mx-auto px-5">
+                <div className="container mx-auto">
                     {props.children}
                 </div>
             </body>  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-modal/3.14.3/react-modal.min.js"
                ></script>
-            <Footer />
+            <Footer/>
 
 
         </>

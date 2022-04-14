@@ -9,23 +9,21 @@ export default function PostPreview({
   link
 }) {
   return (
+    <Link as={link ? `${link}` : `/events/${slug}`} href={`/events/${slug}`}>
     <div className="
-    group p-3 shadow-big transition-all duration-200 rounded-10 shadow-md
-    2xl:shadow-none 2xl:hover:shadow-lg
+    group p-3 shadow-md transition-all duration-200 rounded-10 cursor-pointer 
+    w-[90vw] ml:w-auto ml:m-0 lg:shadow-none lg:hover:shadow-xl text-center
     ">
-      <div className="mb-5">
-        <Link as={link ? `${link}` : `/events/${slug}`} href={`/events/${slug}`}>
-          <a>
-            <CoverImage slug={slug} title={title} src={coverImage} postUrl={"programs"} />
-          </a>
-        </Link>
+    <div className="mb-5">
+      <a>
+        <CoverImage slug={slug} title={title} src={coverImage} postUrl={"programs"} />
+      </a>
       </div>
-      <h3 className="text-3xl mb-2 leading-snug pl-4">
-        <Link as={link ? `${link}` : `/events/${slug}`} href={`/events/${slug}`}>
-          <a className="text-decoration-none text-secondary">{title}</a>
-        </Link>
+      <h3 className="mb-2 leading-snug -mt-8 text-3xl md:text-2xl lg:text-3xl lg:pl-2 ml:text-left">
+        <a className="text-decoration-none text-secondary">{title}</a>
       </h3>
-      <p className="text-lg leading-relaxed mb-4 pl-4">{excerpt}</p>
+      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
     </div>
+    </Link>
   )
 }

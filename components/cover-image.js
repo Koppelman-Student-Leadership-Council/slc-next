@@ -11,10 +11,8 @@ export default function CoverImage({ title, src, slug }) {
       />
     )
     return (
-      <div className="sm:mx-0 card-zoom-image-h1">
-        
-            {image}
-        
+      <div className="card-zoom-image-h1">
+        {image}
       </div>
     )
   }

@@ -31,7 +31,8 @@ module.exports = {
     // https://tailwindcss.com/docs/responsive-design#customizing-breakpoints
     screens: {
       'mm': '375px',
-      'ml': '425px',
+      'ml': '426px',
+      '5h': '500px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
