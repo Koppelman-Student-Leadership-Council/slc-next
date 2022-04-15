@@ -65,7 +65,7 @@
 
 .link::before {
     content: '';
-    /* animation: lineOnLoad .3s ease-in-out 0s 1 forwards; */
+    animation: lineOnLoad 3s ease-in-out 0s 1 forwards;
     position: absolute;
     width: 80%;
     height: 3px;
@@ -289,8 +289,8 @@
 }
 
 .group-h2:hover .card-zoom-image-h2 {
-    @apply scale-125 opacity-30;
+    @apply lg:scale-125 lg:opacity-30;
 }
 .group-h2:hover .card-zoom-text-h2 {
-    @apply scale-75 opacity-100;
+    @apply lg:scale-75 lg:opacity-100;
 }

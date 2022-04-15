@@ -8,7 +8,21 @@ export default function Partnership({
     imageLink
 }) {
     return (
-        <div className="col-md-3 mb-2 rounded-10 text-2xl font-medium" >
+        <div className="mb-2 rounded-10 text-2xl font-medium" >
+            
+            <div className="grid justify-items-center group-h2">
+                <a target="_blank" href={link} rel="noopener noreferrer">
+                    <a>
+                        <ZoomCard slug={title} title={title} src={imageLink} postUrl={"programs"} />
+                    </a>
+                </a>
+                <a target="_blank" href={link} rel="noopener noreferrer">
+                <h1 className="text-center max-w-xs lg:hidden">
+                    {title}
+                </h1>
+                </a>
+            </div>
+
             {/* <div className=" content ">
                 <a target="_blank" href={link} rel="noopener noreferrer">
                     <a>
@@ -27,13 +41,6 @@ export default function Partnership({
 
                 </a>
             </div> */}
-            <div className="group-h2">
-                <a target="_blank" href={link} rel="noopener noreferrer">
-                    <a>
-                        <ZoomCard slug={title} title={title} src={imageLink} postUrl={"programs"} />
-                    </a>
-                </a>
-            </div>
         </div>
     )
 }
