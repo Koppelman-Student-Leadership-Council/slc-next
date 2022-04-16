@@ -60,7 +60,7 @@ function Contact() {
                 </div>
             </Form>
 
-            <div className="mt-5 mb-3" align="center" >
+            <div className="mt-5 mb-3 text-md ml:text-lg" align="center" >
                 <b> Mailing Address</b> <br />
                 2900 Bedford Ave. Brooklyn, NY 11210 <br />
             </div>

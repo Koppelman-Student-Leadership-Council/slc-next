@@ -23,8 +23,6 @@ export default function LayoutOne(props) {
             </body>  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-modal/3.14.3/react-modal.min.js"
                ></script>
             <Footer/>
-
-
         </>
     )
 }
