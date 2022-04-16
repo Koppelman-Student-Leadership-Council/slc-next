@@ -294,3 +294,7 @@
 .group-h2:hover .card-zoom-text-h2 {
     @apply lg:scale-75 lg:opacity-100;
 }
+
+.linkedin-button{
+    stroke:none;fill-rule:nonzero;fill:rgb(0%,46.666667%,70.980392%);fill-opacity:1;
+}
