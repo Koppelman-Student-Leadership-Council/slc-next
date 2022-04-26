@@ -6,13 +6,10 @@ function HomePage({ membersData }) {
     console.log(membersData)
     return <>
         <Layout>
-
             <PostTitle breadcrumb>Our Team</PostTitle>
-            <div className="row ">
-
+            <div className="grid justify-items-center pt-10 px-0 sm:mx-30 lg:px-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-10">
                 {membersData.map((member) => {
-                    return <div key={member.name} className=" col-md-6 col-lg-3 mt-1 mb-1">
-
+                    return <div key={member.name} className="mt-1 mb-1">
                         <MemberCard image={member.image_link} name={member.name} description={member.description} title={member.title} department={member.department} linkedin={member.linkedin} /></div>
                 })}
             </div>

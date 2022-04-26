@@ -28,5 +28,16 @@ module.exports = {
     backgroundImage: {
       // 'businessMatters': "url('/assets/programs/business-matters.png')",
     },
+    // https://tailwindcss.com/docs/responsive-design#customizing-breakpoints
+    screens: {
+      'mm': '375px',
+      'ml': '426px',
+      '5h': '500px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
   },
 }

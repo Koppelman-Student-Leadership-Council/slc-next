@@ -36,21 +36,16 @@ function HomePage() {
     return <>
         <Layout>
             <PostTitle breadcrumb>Departments</PostTitle>
-            <div className="">
+            <div className="pt-10 text-lg px-2">
                 <p>
                     The Student Leadership Council aims to cultivate the leadership potential of all our members. We offer a unique platform for idea-sharing and development, access to senior administrators in the KSB, and encourage peer-to-peer mentoring.We encourage our members to strive for more in their careers, academics, and in their communities.</p>
-            </div>
-
-
             <br /><FullDetailAbout title={departments[0]}  content={departmentData[departments[0]]} />
             <br /><FullDetailAbout title={departments[1]}  content={departmentData[departments[1]]} />
             <br /><FullDetailAbout title={departments[2]}  content={departmentData[departments[2]]} />
             <br /><FullDetailAbout title={departments[3]}  content={departmentData[departments[3]]} />
             <br /><FullDetailAbout title={departments[4]}  content={departmentData[departments[4]]} />
             <br /><FullDetailAbout title={departments[5]}  content={departmentData[departments[5]]} />
-             
-                
-
+            </div>
         </Layout>
     </>
 }

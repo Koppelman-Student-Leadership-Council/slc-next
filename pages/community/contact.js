@@ -26,45 +26,43 @@ function Contact() {
     return <>
         <Layout>
             <PostTitle breadcrumb >Contact  </PostTitle>
-            <span className="float-right">< JoinButton /> </span><br />
-            <p>
+            <p className="pt-10 text-xl">
                 Complete the form below or email us at <b>brooklynslcouncil@gmail.com</b>
             </p>
-
             <Form onSubmit={handleSubmission} action="https://brooklynslcouncil.com/mail/contact_me.php">
+                <div className="text-xl grid">
+                    <Form.Group>
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control id="name" required className="dark-focus" type="text" placeholder="John Doe" />
+                    </Form.Group>
+                    <br />
+                    <Form.Group controlId="formBasicEmail">
+                        <Form.Label  >Email address</Form.Label>
+                        <Form.Control id="email" required className="dark-focus" type="email" placeholder="johndoe@gmail.com" />
 
-                <Form.Group>
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control id="name" required className="dark-focus" type="text" placeholder="John Doe" />
-                </Form.Group>
-                <br />
-                <Form.Group controlId="formBasicEmail">
-                    <Form.Label  >Email address</Form.Label>
-                    <Form.Control id="email" required className="dark-focus" type="email" placeholder="johndoe@gmail.com" />
+                    </Form.Group>
+                    <br />
+                    <Form.Group>
+                        <Form.Label >Phone Number</Form.Label>
 
-                </Form.Group>
-                <br />
-                <Form.Group>
-                    <Form.Label >Phone Number</Form.Label>
+                        <Form.Control id="phone" required className="dark-focus" type="number" placeholder="Interview Request" />
 
-                    <Form.Control id="phone" required className="dark-focus" type="number" placeholder="Interview Request" />
-
-                </Form.Group>
-                <br />
-                <Form.Group>
-                    <Form.Label  >Message</Form.Label>
-                    <Form.Control id="message" className="dark-focus" as="textarea" rows={3} placeholder="Message." />
-                </Form.Group>
-                <br />
-                <Button type="submit" className="black-text" >
-                    SUBMIT
-                </Button>
+                    </Form.Group>
+                    <br />
+                    <Form.Group>
+                        <Form.Label  >Message</Form.Label>
+                        <Form.Control id="message" className="dark-focus" as="textarea" rows={3} placeholder="Message." />
+                    </Form.Group>
+                    <br />
+                    <Button type="submit" className="black-text text-2xl w-[90vw] justify-self-center ml:w-[30vw]" >
+                        Send
+                    </Button>
+                </div>
             </Form>
 
-            <div className="mt-5 mb-3" align="center" >
+            <div className="mt-5 mb-3 text-md ml:text-lg" align="center" >
                 <b> Mailing Address</b> <br />
-                2900 Bedford Ave. <br />
-                Brooklyn, NY 11210 <br />
+                2900 Bedford Ave. Brooklyn, NY 11210 <br />
             </div>
 
             <div className="mb-5 " >
@@ -76,6 +74,9 @@ function Contact() {
                     isMarkerShown
 
                 />
+            </div>
+            <div className="grid justify-items-center">
+                <span className="float-right">< JoinButton /> </span><br />
             </div>
         </Layout>
     </>

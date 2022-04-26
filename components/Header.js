@@ -7,12 +7,10 @@ export default function Header({ container }) {
 
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark no-flow">
             <div className="container-fluid ">
-                <Link href="/"><a className="navbar-brand" href="#">
+                <Link href="/"><a className="navbar-brand -my-2" href="#">
                     <img
                         src='/assets/logo.png'
-                        width={128}
-                        height={52}
-                        
+                        className="h-[68.52px]"
                     />
                     {/* <img className="logo" src="/assets/logo.png" alt="Koppelman Student Leadership Council" /> */}
                 </a></Link>
