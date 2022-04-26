@@ -2,18 +2,22 @@ import Layout from "../../components/Layout";
 import PostTitle from "../../components/post-title";
 import FullDetailAbout from "../../components/full-detail-about"
 import SideRightAboutTitle from "../../components/sider-about-title"
-import sideLAboutTitle from "../../components/sidel-about-linktitle"
+import SideTitleLink from "../../components/sidel-about-linktitle"
 
 
 
-const toolsData = [{ title: "titleX", description: "Description" }];
+const toolsData = [
+    { title: "Stock Automata", description: "Stock Automata is a stock market data collection application.", image:"/assets/promotion/logo.png", href:"https://stock.brooklynslcouncil.com/" },
+    { title: "Stock Automata", description: "Stock Automata is a stock market data collection application.", image:"/assets/promotion/logo.png", href:"https://qr.brooklynslcouncil.com/" }
+
+];
 
 
 function HomePage() {
 
     const listTools = toolsData.map(item => {
         return <>
-            <br /><sideLAboutTitle title={item.title} content={item.description} />
+            <br /><SideTitleLink title={item.title} content={item.description} image={item.image} href={item.href} />
         </>
     })
 
@@ -22,7 +26,7 @@ function HomePage() {
             <PostTitle breadcrumb>Tools</PostTitle>
             <div className="pt-10 text-lg px-2">
                 <p>
-                    The Student Leadership Council (SLC) is a student-led organization that aims to create a collaborative environment for students to share their skills and talents. We encourage the sharing of tools and resources  The Tech Department is an extension of SLC, and as such, they are commited to create tools for students to use for free with no intention of getting any revenue from it!</p>
+                    The Student Leadership Council (SLC) is a student-led organization that aims to create a collaborative environment for students to share their skills and talents. We encourage the sharing of tools and resources  The Tech Department is an extension of SLC, and as such, they are commited to create tools for students to use for free!</p>
                 <p></p>
                 {listTools}
             </div>
