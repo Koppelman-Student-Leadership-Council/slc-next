@@ -8,7 +8,7 @@ import SideTitleLink from "../../components/sidel-about-linktitle"
 
 const toolsData = [
     { title: "Stock Automata", description: "Stock Automata is a stock market data collection application.", image:"/assets/promotion/logo.png", href:"https://stock.brooklynslcouncil.com/" },
-    { title: "Stock Automata", description: "Stock Automata is a stock market data collection application.", image:"/assets/promotion/logo.png", href:"https://qr.brooklynslcouncil.com/" }
+    { title: "QR Creator", description: "Create QR codes", image:"/assets/promotion/logo.png", href:"https://qr.brooklynslcouncil.com/" }
 
 ];
 
