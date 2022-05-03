@@ -7,8 +7,8 @@ import SideTitleLink from "../../components/sidel-about-linktitle"
 
 
 const toolsData = [
-    { title: "Stock Automata", description: "Stock Automata is a stock market data collection application.", image:"/assets/promotion/logo.png", href:"https://stock.brooklynslcouncil.com/" },
-    { title: "QR Creator", description: "Create QR codes", image:"/assets/promotion/logo.png", href:"https://qr.brooklynslcouncil.com/" }
+    { title: "Stock Automata", description: "Stock Automata is a stock market data collection application that you can use for free when deciding what stocks to buy.", image:"/assets/programs/stock-automata.png", href:"https://stock.brooklynslcouncil.com/" },
+    { title: "QR Creator", description: "Create QR codes for free. Useful when hosting events and the like.", image:"/assets/programs/qr-generator.png", href:"https://qr.brooklynslcouncil.com/" }
 
 ];
 
