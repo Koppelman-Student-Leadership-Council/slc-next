@@ -30,8 +30,8 @@ function HomePage() {
                 </div>
                 <div className="grid gap-10 justify-items-center row-gap-20 grid-cols-1 mb-32 pt-3 sm:grid-cols-2 md:grid-cols-3 md:col-gap-16 md:row-gap-32 lg:col-gap-32 lg:text-3xl">
                     <EventPreview title="Departments" link="about/departments/"  coverImage="\assets\programs\ksb-fair.png"  />
-                    <EventPreview title="Events" link="events" coverImage="\assets\programs\stock-automata.png"  />
-                    <EventPreview title="Tools" link="about/tools" coverImage="\assets\programs\program-luncheon.png"  />
+                    <EventPreview title="Events" link="events" coverImage="\assets\programs\stock-automata-pres.png"  />
+                    <EventPreview title="Tools" link="about/tools" coverImage="\assets\programs\tools-gif.gif"  />
                     {/* <EventPreview title="Learn More" slug="learn-more" excerpt="Learn more about slc." coverImage="\assets\programs\learn-more.png"  /> */}
                     {/* repurposed with button */}
                 </div>
