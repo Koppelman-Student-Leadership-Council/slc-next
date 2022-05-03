@@ -29,6 +29,7 @@ function HomePage({ calendarPreData }) {
         // summary: 'test',
         // color: 'blue',
     }])
+    
     let eventsMemory = []
     const [featuredEvents, setFeaturedEvents] = useState({});
     const [modalIsOpen, setIsOpen] = useState(false);
@@ -66,47 +67,48 @@ function HomePage({ calendarPreData }) {
         if (typeof window !== 'undefined') {
             setDocumentRendered(true)
         }
-        appendEvents(events, calendarPreData)
-        fetch('https://admin.brooklynslcouncil.com/public/api/events').then((res) => res.json()).then((data) => {
-            setData(data);
-            // console.log(data);
-            appendEvents(events, data)
+        appendEvents([], calendarPreData)
+        // setEvents(calendarPreData)
+        // fetch('https://admin.brooklynslcouncil.com/public/api/events').then((res) => res.json()).then((data) => {
+        //     setData(data);
+        //     // console.log(data);
+        //     appendEvents(events, data)
 
 
-        })
-        fetch('https://admin.brooklynslcouncil.com/public/api/events').then((res) => res.json()).then((data) => {
-            // setData(data);
-            // console.log(data);
-            addInformationToEvents(data)
-            setData(data)
+        // })
+        // fetch('https://admin.brooklynslcouncil.com/public/api/events').then((res) => res.json()).then((data) => {
+        //     // setData(data);
+        //     // console.log(data);
+        //     addInformationToEvents(data)
+        //     setData(data)
 
 
-        })
+        // })
 
     }, [])
 
-    function appendEvents(events, data) {
+    function appendEvents(tempEvents, data) {
         data.forEach(
             event => {
                 console.log("Appending Event")
-                if (!eventMemoryHasEventWithID(events, event.calendar_id)) {
+                if (!eventMemoryHasEventWithID(tempEvents, event.calendar_id)) {
                     eventsMemory.push(event.calendar_id)
-                    events.push({
+                    tempEvents.push({
                         id: event.calendar_id,
                         // startAt: event.event_date_starts,
                         startAt: "2022-05-29 00:30:00",
                         // endAt: event.event_date_ends,
-                        endAt: "2022-05-30 00:30:00",
+                        endAt: "2022-05-30 00:50:00",
                         summary: event.title,
                         description: ""
                     });
-                    events = removeDuplicateEvents(events);
+                    // tempEvents = removeDuplicateEvents(tempEvents);
                     // console.log(events)
                 }
             }
         )
-        setEvents(events)
-        console.log(events)
+        console.log(tempEvents)
+        setEvents(tempEvents)
     }
 
     function addInformationToEvents(data) {
@@ -154,6 +156,8 @@ function HomePage({ calendarPreData }) {
             <div className="pt-10">
 
                 {documentRendered && <div className="h-[500px]">
+                    {console.log("Hello this are the events for Kalend")}
+                    {console.log(events)}
                     <Kalend
                         initialView={CalendarView.MONTH}
                         events={events}
@@ -167,20 +171,20 @@ function HomePage({ calendarPreData }) {
 
             </div>
         </Layout>
-            <Modal
-                isOpen={modalIsOpen}
-                
-                onRequestClose={closeModal}
-                style={customStyles}
-                contentLabel="Example Modal"
-            >
-                <button className="float-right" onClick={closeModal}>Close</button><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
-                <br />
-                <div><div dangerouslySetInnerHTML={createMarkup(modalDescription)}></div>
-                {modalLink && <a target="_blank" rel="noopener noreferrer"  href={modalLink}>RSVP/More Info</a>}
-                
-                </div>
-            </Modal>
+        <Modal
+            isOpen={modalIsOpen}
+
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="Example Modal"
+        >
+            <button className="float-right" onClick={closeModal}>Close</button><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
+            <br />
+            <div><div dangerouslySetInnerHTML={createMarkup(modalDescription)}></div>
+                {modalLink && <a target="_blank" rel="noopener noreferrer" href={modalLink}>RSVP/More Info</a>}
+
+            </div>
+        </Modal>
     </>
 }
 
