@@ -37,13 +37,14 @@ function HomePage({ calendarPreData }) {
     const [modalDescription, setModalDescription] = useState("Description");
 
     let subtitle;
-    // console.log(calendarPreData)
+    console.log(calendarPreData)
     function openModal(e) {
         // console.log(e)
         setIsOpen(true);
         // setModalTitle(e.summary)
         // console.log("testing featured events and matching with event summary")
-        // console.log(featuredEvents)
+        console.log("Featured Events: ")
+        console.log(featuredEvents)
         const featuredEventSelected = featuredEvents[e.summary]
         // console.log(featuredEventSelected)
         if (featuredEventSelected) {
@@ -66,7 +67,7 @@ function HomePage({ calendarPreData }) {
             setDocumentRendered(true)
         }
         appendEvents(events, calendarPreData)
-        fetch('https://admin.brooklynslcouncil.com/public/api/events-calendar').then((res) => res.json()).then((data) => {
+        fetch('https://admin.brooklynslcouncil.com/public/api/events').then((res) => res.json()).then((data) => {
             setData(data);
             // console.log(data);
             appendEvents(events, data)
@@ -87,12 +88,15 @@ function HomePage({ calendarPreData }) {
     function appendEvents(events, data) {
         data.forEach(
             event => {
+                console.log("Appending Event")
                 if (!eventMemoryHasEventWithID(events, event.calendar_id)) {
                     eventsMemory.push(event.calendar_id)
                     events.push({
                         id: event.calendar_id,
-                        startAt: event.event_date_starts,
-                        endAt: event.event_date_ends,
+                        // startAt: event.event_date_starts,
+                        startAt: "2022-05-29 00:30:00",
+                        // endAt: event.event_date_ends,
+                        endAt: "2022-05-30 00:30:00",
                         summary: event.title,
                         description: ""
                     });
@@ -102,6 +106,7 @@ function HomePage({ calendarPreData }) {
             }
         )
         setEvents(events)
+        console.log(events)
     }
 
     function addInformationToEvents(data) {
@@ -180,8 +185,9 @@ function HomePage({ calendarPreData }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch('https://admin.brooklynslcouncil.com/public/api/events-calendar')
+    const res = await fetch('https://admin.brooklynslcouncil.com/public/api/events')
     const calendarPreData = await res.json()
+    // console.log(calendarPreData)
     return {
         props: {
             calendarPreData,
