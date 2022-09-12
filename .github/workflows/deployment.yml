@@ -1,0 +1,18 @@
+name: Continuous Integration
+on:
+  push:
+    branches: deployment
+  pull_request:
+    branches: deployment
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2   
+      - name: Run Makefile deploy
+        run: |
+          git config --global user.name "nenewang"
+          make build-commit-donpush
+          make ft-configpush
