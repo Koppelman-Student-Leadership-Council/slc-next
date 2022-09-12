@@ -5,7 +5,7 @@ This is a website created to for Brooklyn College's Student Leadership Council.
 
 [Youtube Tutorial](https://www.youtube.com/watch?v=0STyL67p16M&ab_channel=NelsonWang)
 
-1. Make your commits to main branch
+1. Make your commits to `main` branch
 2. Merge changes into `deployment` branch
 3. Wait for a couple minutes github will automatically deploy the changes
 
