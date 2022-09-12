@@ -1,11 +1,20 @@
 
-PAGE=admin@slc-prototype.evildorm.com
+PAGE=https://brooklynslcouncil.com
+
+# Prototype FTP
+# FTP_HOST=wangnancy.com
+# FTP_USER=admin@slc-prototype.evildorm.com
+# FTP_PASSWORD=slcadmin2022
+
+FTP_HOST=192.254.225.2
+FTP_USER=html_public@koppelmanslc.com
+FTP_PASSWORD=html_public
+
 THIS_BRANCH=master
 MASTER_BRANCH=master
 DEPLOY_BRANCH=deployment
-FTP_HOST=wangnancy.com
-FTP_USER=admin@slc-prototype.evildorm.com
-FTP_PASSWORD=slcadmin2022
+
+
 
 main: build-commit ft-push
 
@@ -59,7 +68,7 @@ ft-push:
 	echo "open in ${PAGE}" && git log -n 2
 	
 ft-configpush:
-	git config git-ftp.url ftp.${FTP_HOST}
+	git config git-ftp.url ${FTP_HOST}
 	git config git-ftp.user ${FTP_USER}
 	git config git-ftp.password ${FTP_PASSWORD}
 	git config git-ftp.syncroot out/
@@ -67,7 +76,7 @@ ft-configpush:
 
 
 ftpinit:
-	git config git-ftp.url ftp.${FTP_HOST}
+	git config git-ftp.url ${FTP_HOST}
 	git config git-ftp.user ${FTP_USER}
 	git config git-ftp.password ${FTP_PASSWORD}
 	git config git-ftp.syncroot out/
