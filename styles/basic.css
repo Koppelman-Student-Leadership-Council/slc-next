@@ -190,9 +190,9 @@
 
 .portraits-front {
 
-
+   
     height: 300px !important;
-
+    object-fit: cover;
     background-color: #87807C;
     transition: all .3s ease-in-out 0s;
 
