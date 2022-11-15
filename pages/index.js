@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import JoinButton from '../components/btn-join-slc'
 
 
+
 function HomePage() {
   return <div>
     <Layout>
