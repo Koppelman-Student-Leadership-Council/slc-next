@@ -24,13 +24,11 @@ const EVENTS_API = "https://admin.brooklynslcouncil.com/public/api/events-calend
 const EVENTS_API2 = "https://admin.brooklynslcouncil.com/public/api/events"
 
 
-function HomePage({ calendarPreData }) {
-    const [data, setData] = useState(null)
-    const [documentRendered, setDocumentRendered] = useState(false);
+function HomePage() {
+    const [calendarLoaded, setCalendarLoaded] = useState(false);
     const [events, setEvents] = useState([{
     }])
-    let eventsMemory = []
-    const [featuredEvents, setFeaturedEvents] = useState({});
+    const [featuredEvents, setFeaturedEvents] = useState([]);
     const [modalIsOpen, setIsOpen] = useState(false);
     const [modalTitle, setModalTitle] = useState("Title");
     const [modalLink, setModalLink] = useState("");
@@ -80,17 +78,16 @@ function HomePage({ calendarPreData }) {
             }
         ]
 
-        appendEvents(events, SAMPLE_DATA)
+        appendEvents([...events], SAMPLE_DATA)
 
-        setDocumentRendered(true)
+        setCalendarLoaded(true)
 
 
     }, [])
 
-    function appendEvents(events, data) {
-        data.forEach(
+    function appendEvents(events, calendarStartSummaryTimeData) {
+        calendarStartSummaryTimeData.forEach(
             event => {
-                eventsMemory.push(event.calendar_id)
                 events.push({
                     id: event.calendar_id ?? 0,
                     startAt: event.event_date_starts ?? 0,
@@ -100,9 +97,15 @@ function HomePage({ calendarPreData }) {
                 });
             }
         )
-        setEvents(events)
+        console.log("adding events", [...events])
+        setEvents([...events])
     }
 
+    /**
+     * Here the detailed descriptions of each for the modals
+        
+    * @param {*} data 
+     */
     function addInformationToEvents(data) {
         let featuedEventsFetch = featuredEvents
         data.forEach(
@@ -130,15 +133,15 @@ function HomePage({ calendarPreData }) {
             <PostTitle breadcrumb>Calendar</PostTitle>
             <div className="pt-10">
 
-                {documentRendered && <div className="h-[500px]">
+                {calendarLoaded && <div className="h-[500px]">
                     <Kalend
-                        initialView={CalendarView.MONTH}
+                        initialView={CalendarView.AGENDA}
                         events={events}
                         onEventClick={(eventInfo) => openModal(eventInfo)}
                     />
                 </div>}
 
-                {!documentRendered &&
+                {!calendarLoaded &&
                     <div className="h-[500px] content-center center-content" ><div>Retrieving Calendar Events...</div>
                     </div>}
 

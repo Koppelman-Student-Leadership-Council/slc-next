@@ -8,9 +8,9 @@ import SimpleReactLightbox from 'simple-react-lightbox'
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
 export default function MyApp({ Component, pageProps }) {
   
-  // useEffect(() => {
-  //   import("bootstrap/dist/js/bootstrap");
-  // }, []);
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap");
+  }, []);
   return (
 
     <SimpleReactLightbox>

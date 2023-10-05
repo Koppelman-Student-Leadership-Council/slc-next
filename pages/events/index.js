@@ -11,8 +11,7 @@ function HomePage() {
                     <EventPreview title="Business Matters 2023" slug="business-matters-2023" excerpt="Learn more about slc KSB Summit." coverImage="\assets\promotion\businessmatters2023\post.png"  />
                     <EventPreview title="Business Matters" slug="business-matters" excerpt="Learn more about slc Business matters."  coverImage="\assets\programs\business-matters.png"  />
                     <EventPreview title="KSB Summit" slug="summit" excerpt="Learn more about slc KSB Summit." coverImage="\assets\programs\ksb-summit.png"  />
-                    {/* <EventPreview title="Learn More" slug="learn-more" excerpt="Learn more about slc." coverImage="\assets\programs\learn-more.png"  /> */}
-                    {/* repurposed with button */}
+                    
                 </div>
             </section>
         </Layout>
