@@ -32,3 +32,21 @@ Editable content:
 ### Credits
 The site uses the styling and overall design from the previous SLC website: 
 created by former SLC Tech Director [Mohammad Hossain](https://github.com/mohhossain) and his team.
+
+
+### 2023-10-04 18:51:18 Removing Unused Packages
+
+
+The objective is to remove
+
+![](./img/2023-10-04-18-54-30.png)
+
+
+Deleted:
+
+
+```
+Removing Maps:
+
+
+```
