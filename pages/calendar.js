@@ -26,7 +26,7 @@ const EVENTS_API2 = "https://admin.brooklynslcouncil.com/public/api/events"
 
 function HomePage() {
     const [calendarLoaded, setCalendarLoaded] = useState(false);
-    const [events, setEvents] = useState([{
+    const [eventsFormattedForKalend, setEvents] = useState([{
     }])
     const [featuredEvents, setFeaturedEvents] = useState([]);
     const [modalIsOpen, setIsOpen] = useState(false);
@@ -34,10 +34,19 @@ function HomePage() {
     const [modalLink, setModalLink] = useState("");
     const [modalDescription, setModalDescription] = useState("Description");
 
-    function openModal(e) {
+    function openModal(formatedForKalendEventData) {
         // console.log(e)
         setIsOpen(true);
-        const featuredEventSelected = featuredEvents[e.summary]
+        // If not in featured events then state the error
+        if (!featuredEvents[formatedForKalendEventData.summary]) {
+            setModalDescription("No description found for this event. Please contact the webmaster.")
+            setModalTitle("Error")
+            setModalLink("")
+            return
+        }
+        
+        const featuredEventSelected = featuredEvents[formatedForKalendEventData.summary]
+
         if (featuredEventSelected) {
             setModalDescription(featuredEventSelected.description)
             setModalTitle(featuredEventSelected.title)
@@ -78,7 +87,7 @@ function HomePage() {
             }
         ]
 
-        appendEvents([...events], SAMPLE_DATA)
+        appendEvents([...eventsFormattedForKalend], SAMPLE_DATA)
 
         setCalendarLoaded(true)
 
@@ -136,7 +145,7 @@ function HomePage() {
                 {calendarLoaded && <div className="h-[500px]">
                     <Kalend
                         initialView={CalendarView.AGENDA}
-                        events={events}
+                        events={eventsFormattedForKalend}
                         onEventClick={(eventInfo) => openModal(eventInfo)}
                     />
                 </div>}
