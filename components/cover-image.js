@@ -5,8 +5,11 @@ export default function CoverImage({ title, src, slug }) {
       <img
         src={src}
         alt={`Cover Image for ${title}`}
+        // Max height as 640px
+        style={{ maxHeight: '500px' }}
         className={cn(' rounded-10', {
           'duration-200 ': slug,
+          
         })}
       />
     )
