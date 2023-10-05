@@ -19,15 +19,15 @@ const customStyles = {
     },
 };
 
+
+const EVENTS_API = "https://admin.brooklynslcouncil.com/public/api/events-calendar"
+const EVENTS_API2 = "https://admin.brooklynslcouncil.com/public/api/events"
+
+
 function HomePage({ calendarPreData }) {
     const [data, setData] = useState(null)
     const [documentRendered, setDocumentRendered] = useState(false);
     const [events, setEvents] = useState([{
-        // id: 2,
-        // startAt: '2021-11-21T18:00:00.000Z',
-        // endAt: '2021-11-21T19:00:00.000Z',
-        // summary: 'test',
-        // color: 'blue',
     }])
     let eventsMemory = []
     const [featuredEvents, setFeaturedEvents] = useState({});
@@ -36,20 +36,13 @@ function HomePage({ calendarPreData }) {
     const [modalLink, setModalLink] = useState("");
     const [modalDescription, setModalDescription] = useState("Description");
 
-    let subtitle;
-    // console.log(calendarPreData)
     function openModal(e) {
         // console.log(e)
         setIsOpen(true);
-        // setModalTitle(e.summary)
-        // console.log("testing featured events and matching with event summary")
-        // console.log(featuredEvents)
         const featuredEventSelected = featuredEvents[e.summary]
-        // console.log(featuredEventSelected)
         if (featuredEventSelected) {
             setModalDescription(featuredEventSelected.description)
             setModalTitle(featuredEventSelected.title)
-            // console.log(featuredEventSelected.description)
             setModalLink(featuredEventSelected.item_link)
         }
 
@@ -62,43 +55,49 @@ function HomePage({ calendarPreData }) {
 
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            setDocumentRendered(true)
-        }
-        appendEvents(events, calendarPreData)
-        fetch('https://admin.brooklynslcouncil.com/public/api/events-calendar').then((res) => res.json()).then((data) => {
-            setData(data);
-            // console.log(data);
-            appendEvents(events, data)
 
+        const SAMPLE_DATA = [
+            {
+                "calendar_id": 1,
+                "event_date_starts": "2023-10-15T10:00:00Z",
+                "event_date_ends": "2023-10-15T12:00:00Z",
+                "title": "Sample Event 1",
+                "description": "Description for Sample Event 1"
+            },
+            {
+                "calendar_id": 2,
+                "event_date_starts": "2023-10-20T14:00:00Z",
+                "event_date_ends": "2023-10-20T16:00:00Z",
+                "title": "Sample Event 2",
+                "description": "Description for Sample Event 2"
+            },
+            {
+                "calendar_id": 3,
+                "event_date_starts": "2023-10-25T09:30:00Z",
+                "event_date_ends": "2023-10-25T11:30:00Z",
+                "title": "Sample Event 3",
+                "description": "Description for Sample Event 3"
+            }
+        ]
 
-        })
-        fetch('https://admin.brooklynslcouncil.com/public/api/events').then((res) => res.json()).then((data) => {
-            // setData(data);
-            // console.log(data);
-            addInformationToEvents(data)
-            setData(data)
+        appendEvents(events, SAMPLE_DATA)
 
+        setDocumentRendered(true)
 
-        })
 
     }, [])
 
     function appendEvents(events, data) {
         data.forEach(
             event => {
-                if (!eventMemoryHasEventWithID(events, event.calendar_id)) {
-                    eventsMemory.push(event.calendar_id)
-                    events.push({
-                        id: event.calendar_id,
-                        startAt: event.event_date_starts,
-                        endAt: event.event_date_ends,
-                        summary: event.title,
-                        description: ""
-                    });
-                    events = removeDuplicateEvents(events);
-                    // console.log(events)
-                }
+                eventsMemory.push(event.calendar_id)
+                events.push({
+                    id: event.calendar_id ?? 0,
+                    startAt: event.event_date_starts ?? 0,
+                    endAt: event.event_date_ends ?? 0,
+                    summary: event.title ?? "",
+                    description: ""
+                });
             }
         )
         setEvents(events)
@@ -119,24 +118,7 @@ function HomePage({ calendarPreData }) {
 
     }
 
-    function eventMemoryHasEventWithID(events, calendarID) {
-        const filteredArr = events.filter(el => {
-            el.id == calendarID
-        });
-        return (filteredArr.length > 0)
-    }
-
-    function removeDuplicateEvents(events) {
-
-        const seen = new Set();
-        const filteredArr = events.filter(el => {
-            const duplicate = seen.has(el.id);
-            seen.add(el.id);
-            return !duplicate;
-        });
-        // console.log(filteredArr)
-        return (filteredArr)
-    } function createMarkup(markup) {
+    function createMarkup(markup) {
         return {
             __html: markup
         };
@@ -162,31 +144,22 @@ function HomePage({ calendarPreData }) {
 
             </div>
         </Layout>
-            <Modal
-                isOpen={modalIsOpen}
-                
-                onRequestClose={closeModal}
-                style={customStyles}
-                contentLabel="Example Modal"
-            >
-                <button className="float-right" onClick={closeModal}>Close</button><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
-                <br />
-                <div><div dangerouslySetInnerHTML={createMarkup(modalDescription)}></div>
-                {modalLink && <a target="_blank" rel="noopener noreferrer"  href={modalLink}>RSVP/More Info</a>}
-                
-                </div>
-            </Modal>
+        <Modal
+            isOpen={modalIsOpen}
+
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="Example Modal"
+        >
+            <button className="float-right" onClick={closeModal}>Close</button><h2 ref={(_subtitle) => (subtitle = _subtitle)}>{modalTitle}</h2>
+            <br />
+            <div><div dangerouslySetInnerHTML={createMarkup(modalDescription)}></div>
+                {modalLink && <a target="_blank" rel="noopener noreferrer" href={modalLink}>RSVP/More Info</a>}
+
+            </div>
+        </Modal>
     </>
 }
 
-export async function getStaticProps() {
-    const res = await fetch('https://admin.brooklynslcouncil.com/public/api/events-calendar')
-    const calendarPreData = await res.json()
-    return {
-        props: {
-            calendarPreData,
-        },
-    }
-}
 
 export default HomePage

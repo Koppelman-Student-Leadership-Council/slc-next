@@ -5,18 +5,6 @@ import emailjs from 'emailjs-com';
 
 function Contact() {
 
-    const handleSubmission = async e => {
-        event.preventDefault()
-
-        emailjs.sendForm('service_3wgvjnc', 'template_cgpz9g9', e.target, 'user_bUjdCRqLeJSakqKuFlLB7')
-            .then((result) => {
-                window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
-            }, (error) => {
-                console.log(error.text);
-            });
-
-    }
-
     const mapUrl = "https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAHedcWWJ17w-V1js7ERyz3USvPosmjNKQ";
     return <>
         <Layout>
