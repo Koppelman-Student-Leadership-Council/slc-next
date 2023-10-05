@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Head from 'next/head';
 import Link from 'next/link'; // Import Link from Next.js
-import {Card} from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 
 export default function LayoutOne(props) {
@@ -17,9 +17,8 @@ export default function LayoutOne(props) {
                 <meta name="description" content="The SLC aims to inspire and encourage students to take the lead in their personal and professional lives. We aim to ensure students are equipped with the resources and knowledge they need to dive into their professional careers." />
                 <meta name="author" content="Koppelman Student Leadership Council" />
             </Head>
-            <body className="pb-5">
-                <Header />
-                <Link href="/events/business-matters-2023/">
+            <Header />
+            <Link href="/events/business-matters-2023/">
                 <a>
                     <Card>
                         <Card.Body>
@@ -33,12 +32,14 @@ export default function LayoutOne(props) {
                     </Card>
                 </a>
             </Link>
+
                 <div className="container mx-auto">
                     {props.children}
                 </div>
-            </body>  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-modal/3.14.3/react-modal.min.js"
-               ></script>
-            <Footer/>
+{/* 
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/react-modal/3.14.3/react-modal.min.js"
+            ></script> */}
+            <Footer />
         </>
     )
 }
