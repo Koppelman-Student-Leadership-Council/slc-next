@@ -9,7 +9,7 @@ function HomePage() {
     return <>
         <div className="group-h1">
             <Layout>
-                <PostTitle breadcrumb>Generative AI</PostTitle>
+                <PostTitle breadcrumb>Generative AI and Business</PostTitle>
                 <div className="pt-10 grid justify-items-center">
                     <div className="card-zoom-h1 justify-self-center">
 
@@ -48,6 +48,7 @@ function HomePage() {
                         <p>
                             Don't miss out on this incredible opportunity to immerse yourself in the world of Generative AI and Business. <em>Space is limited, so act now to secure your spot and be a part of this knowledge-packed event!</em>
                         </p>
+
                         <p>
                             <strong><a href="https://docs.google.com/forms/d/1x0jGe3FV3IB6oMiUKOV8y1iYDRGXAB6WX0bUydp3Dk8/viewform?edit_requested=true">Use the following Google forms and share with your community, friends, clubs, and more.</a></strong>
                         </p>
