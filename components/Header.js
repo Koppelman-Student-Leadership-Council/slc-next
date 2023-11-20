@@ -31,6 +31,7 @@ export default function Header({ container }) {
                                 Events
                             </NavLink>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <NavLink href="/events/business-matters-2023/">Business Matters 2023</NavLink>
                                 <NavLink href="/events/business-matters" className="dropdown-item" >Business Matters</NavLink>
                                 <NavLink href="/events/summit" className="dropdown-item" >KSB Summit</NavLink>
 

@@ -61,7 +61,7 @@ export default class MemberCard extends React.Component {
     }
 
     handleHover(doHover) {
-        console.log(`handle hover ${doHover}`)
+        // console.log(`handle hover ${doHover}`)
         // this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
         this.setState({ isFlipped: doHover })
     }
