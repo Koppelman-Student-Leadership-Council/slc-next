@@ -12,6 +12,7 @@ export default function Quiz() {
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevent the default form submission behavior
 
+
         if (inputValue.toLowerCase() === correctAnswer) {
             setResult('Respuesta correcta el codigo  de este acertijo es: 99');
         } else {
@@ -21,7 +22,7 @@ export default function Quiz() {
 
     return (
         <div>
-            <h1>Guess the Correct Answer</h1>
+            <h1>Checkmate en 1 movimiento?</h1>
 
             <img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/faridmusayev/phpBe26Fu.png" alt="" />
             <form onSubmit={handleSubmit}>
@@ -31,7 +32,11 @@ export default function Quiz() {
                     value={inputValue}
                     onChange={handleInputChange}
                 />
+
+                <p className='ans' >{result}</p>
+                <p>qE5 seria un pesimo movimiento aunque haga el check</p>
                 <br />
+
 
                 <br />
 
@@ -57,7 +62,7 @@ export default function Quiz() {
 
                 <button type="submit">Press Enter to Submit</button>
             </form>
-            <p>{result}</p>
+
         </div>
     );
 }

@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect } from "react";
 import '../styles/index.css';
 import "../styles/basic.css";
+import "../styles/globals.css";
 import SimpleReactLightbox from 'simple-react-lightbox'
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
 export default function MyApp({ Component, pageProps }) {

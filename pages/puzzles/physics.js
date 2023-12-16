@@ -34,7 +34,7 @@ export default function Quiz() {
         <br />
         <button type="submit">Press Enter to Submit</button>
       </form>
-      <p>{result}</p>
+      <p className='ans' >{result}</p>
     </div>
   );
 }
