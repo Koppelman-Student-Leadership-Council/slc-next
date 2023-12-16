@@ -64,7 +64,7 @@ export default function Quiz() {
         Átomos unidos, moléculas en comunión,<br />
         El tejido de la vida, en su mágica unión.<br />
       </div>
-      <img src="https://i.ibb.co/MZCL0tP/Screenshot-2023-12-16-at-6-56-11-PM.png" alt="" />
+      <img src="https://i.ibb.co/5hHgXJW/Screenshot-2023-12-16-at-8-13-16-PM.png" alt="" />
     </div>
   );
 }
