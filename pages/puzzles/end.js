@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function Quiz() {
   const [inputValue, setInputValue] = useState('');
-  const correctAnswer = '-52';
+  const correctAnswer = '-42';
   const [result, setResult] = useState('');
 
   const handleInputChange = (e) => {
@@ -23,6 +23,7 @@ export default function Quiz() {
     <div>
 
       <div>
+        <p>La respuesta es un numero</p>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
